@@ -2520,8 +2520,7 @@
 
 .story-card{
 
-    background:#8dea84;
-
+   
     border:2px solid var(--green-light);
 
     border-radius:24px;
@@ -2563,6 +2562,7 @@
 .story-content{
 
     padding:28px;
+   
     
     
 
@@ -2952,7 +2952,7 @@
 
     height:2px;
 
-    background:var(--green-forest);
+    /* background:var(--green-forest); */
 
     transition:.35s;
 
@@ -4813,3 +4813,4 @@
 .award-row{
     background:linear-gradient(135deg,#d5f1db 0%,#eef9f0 100%);
 }
+

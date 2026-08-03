@@ -2490,3 +2490,15 @@ align-items:center;
 .experience-badge{
     background:#eefaf2;
 }
+
+/* Solar Energy Card */
+
+.solar{
+    background:linear-gradient(135deg,#fff4d6,#ffe8a3);
+    border:2px solid #f4c542;
+}
+
+.solar .infra-icon{
+    background:#fff0b8;
+    color:#c48a00;
+}
