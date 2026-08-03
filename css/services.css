@@ -203,6 +203,117 @@
 .price-card .btn-primary { display: block; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(231,111,81,0.5); }
 
+/* ================================
+   SPRING PLAN
+================================ */
+
+.price-card:nth-child(1){
+    background:linear-gradient(135deg,#f1fff3,#e2f8e7);
+    border:2px solid #8bd3a3;
+}
+
+.price-card:nth-child(1) h3{
+    color:#2d6a4f;
+}
+
+.price-card:nth-child(1) .price strong{
+    color:#2d6a4f;
+}
+
+.price-card:nth-child(1):hover{
+    border-color:#52b788;
+    box-shadow:0 18px 40px rgba(45,106,79,.18);
+}
+
+
+/* ================================
+   FEATURED PLAN
+================================ */
+
+.price-card.featured{
+    background:linear-gradient(135deg,#fff7e8,#fff2dc);
+    border:2px solid #f4a261;
+}
+
+.price-card.featured::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:inherit;
+    padding:2px;
+    background:linear-gradient(135deg,#f4a261,#e76f51);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    pointer-events:none;
+}
+
+
+/* ================================
+   ABUNDANCE PLAN
+================================ */
+
+.price-card:nth-child(3){
+    background:linear-gradient(135deg,#eef5ff,#ddeeff);
+    border:2px solid #82b4ff;
+}
+
+.price-card:nth-child(3) h3{
+    color:#2d5ea8;
+}
+
+.price-card:nth-child(3) .price strong{
+    color:#2d5ea8;
+}
+
+.price-card:nth-child(3):hover{
+    border-color:#4b8ff7;
+    box-shadow:0 18px 40px rgba(75,143,247,.20);
+}
+
+.price-card h3::before{
+    display:block;
+    font-size:42px;
+    margin-bottom:14px;
+}
+
+.price-card:nth-child(1) h3::before{
+    content:"🌱";
+}
+
+.price-card:nth-child(2) h3::before{
+    content:"🌾";
+}
+
+.price-card:nth-child(3) h3::before{
+    content:"🚜";
+}
+
+.price{
+    position:relative;
+    padding:18px 0;
+}
+
+.price::before,
+.price::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:45px;
+    height:2px;
+    background:#d7e8dc;
+}
+
+.price::before{
+    left:20px;
+}
+
+.price::after{
+    right:20px;
+}
+
 /* ===== SECTION 5: TESTIMONIALS ===== */
 .testi-section { background: linear-gradient(180deg, #fffdf5, #f0faf2); }
 .testi-head { text-align: center; margin-bottom: 3rem; }
