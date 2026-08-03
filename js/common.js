@@ -74,7 +74,7 @@ function injectFooter() {
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-brand">
-    <img src="/images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
+    <img src="../images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
 </a>
           <p>Cultivating tomorrow with sustainable, tech-driven agriculture. From soil to harvest, we grow goodness.</p>
           <div class="footer-social">
