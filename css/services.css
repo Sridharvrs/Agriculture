@@ -2079,76 +2079,50 @@
 }
 
 /* Grain */
-
 .grain{
-
-    background-image:url("images/about6.webp");
-
+    background-image:url("../images/about6.webp");
 }
 
 /* Vegetable */
-
 .vegetable{
-
-    background-image:url("images/about7.webp");
-
+    background-image:url("../images/about7.webp");
 }
 
 /* Fruit */
-
 .fruit{
-
-    background-image:url("images/about8.webp");
-
+    background-image:url("../images/about8.webp");
 }
 
 /* Organic */
-
 .organic{
-
-    background-image:url("images/about9.webp");
-
+    background-image:url("../images/about9.webp");
 }
 
 /* Dairy */
-
 .dairy{
-
-    background-image:url('images/piggy.webp');
-
+    background-image:url("../images/piggy.webp");
 }
 
 /* Greenhouse */
-
 .greenhouse{
-
-    background-image:url("images/apple.webp");
-
-    /* background-image: url(); */
-
+    background-image:url("../images/apple.webp");
 }
 
 /* Plantation */
-
 .plantation{
-
-    background-image:url("images/plantation.webp");
-
+    background-image:url("../images/plantation.webp");
 }
 
 /* Logistics */
-
 .logistics{
-
-    background-image:url("images/logistics.webp");
-
+    background-image:url("../images/logistics.webp");
 }
 
 /* Export */
 
 .export{
 
-    background-image:url("images/export.webp");
+    background-image:url("../images/packing.webp");
 
 }
 
