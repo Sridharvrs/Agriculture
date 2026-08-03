@@ -13,7 +13,7 @@
   padding: 8rem 1.5rem 5rem;
   background:
     linear-gradient(135deg, rgba(72,202,228,0.82), rgba(64,145,108,0.75)),
-    url('images/contact1.webp') center/cover;
+    url('../images/contact1.webp') center/cover;
   color: #fff;
   overflow: hidden;
 }

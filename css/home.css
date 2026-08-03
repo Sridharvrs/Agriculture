@@ -19,7 +19,7 @@
   inset: 0;
   background:
     linear-gradient(135deg, rgba(27,67,50,0.55), rgba(45,106,79,0.35)),
-    url('/images/agri1.webp') center/cover;
+    url('../images/agri1.webp') center/cover;
   z-index: -1;
   animation: heroZoom 20s ease-in-out infinite alternate;
 }

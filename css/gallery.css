@@ -12,7 +12,7 @@
   padding: 8rem 1.5rem 4rem;
   background:
     linear-gradient(135deg, rgba(231,111,81,0.7), rgba(244,162,97,0.55)),
-    url('images/farm.webp') center/cover fixed;
+    url('../images/farm.webp') center/cover fixed;
   color: #fff;
 }
 .gal-hero-inner { max-width: 700px; }
