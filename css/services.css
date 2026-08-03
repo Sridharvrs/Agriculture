@@ -2114,7 +2114,7 @@
 
 .dairy{
 
-    background-image:url("/images/piggy.webp");
+    background-image:url('images/piggy.webp');
 
 }
 
@@ -2122,7 +2122,9 @@
 
 .greenhouse{
 
-    background-image:url("/images/apple.webp");
+    background-image:url("images/apple.webp");
+
+    /* background-image: url(); */
 
 }
 
