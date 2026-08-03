@@ -1,0 +1,297 @@
+/* ============================================================
+   AgroHarvest — Sign Up Page (unique split-screen design)
+   ============================================================ */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===== CLOSE BUTTON ===== */
+.signup-close {
+  position: fixed;
+  top: 1.5rem; left: 1.5rem;
+  z-index: 100;
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: all var(--transition);
+}
+.signup-close:hover {
+  background: var(--sun-amber);
+  transform: rotate(90deg) scale(1.1);
+  border-color: var(--sun-amber);
+}
+
+/* ===== LEFT VISUAL PANEL ===== */
+.signup-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--green-forest), var(--green-deep));
+}
+
+.sl-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(160deg, rgba(45,106,79,0.72), rgba(27,67,50,0.88)),
+    url('https://images.pexels.com/photos/5479392/pexels-photo-5479392.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') center/cover;
+}
+
+.sl-content { position: relative; z-index: 1; color: #fff; max-width: 440px; }
+
+.sl-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.sl-brand .leaf-icon {
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--sun-gold), var(--sun-amber));
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+.sl-content h1 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.grad-amber { background: linear-gradient(135deg, var(--sun-gold), #ffd166); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.sl-content > p { opacity: 0.9; margin-bottom: 2rem; font-size: 1.05rem; }
+
+.sl-perks { display: grid; gap: 0.9rem; margin-bottom: 2.5rem; }
+.sl-perks li { display: flex; align-items: center; gap: 0.7rem; }
+.sl-perks span {
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  font-size: 0.72rem;
+  color: var(--sun-gold);
+  flex-shrink: 0;
+}
+
+/* Trust avatars */
+.sl-trust { display: flex; align-items: center; gap: 0.8rem; }
+.sl-avatars { display: flex; }
+.sl-av {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  border: 3px solid var(--green-forest);
+  margin-left: -10px;
+}
+.sl-av:first-child { margin-left: 0; }
+.sl-trust > span { font-size: 0.85rem; opacity: 0.85; }
+
+/* ===== RIGHT FORM AREA ===== */
+.signup-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem clamp(1.5rem, 4vw, 3.5rem);
+  background: var(--cream);
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.gold-eyebrow { background: #fff3d6; color: #b5651d; }
+
+/* ===== ROLE SELECTOR ===== */
+.role-section { margin-bottom: 1.8rem; }
+.role-hint { opacity: 0.65; font-size: 0.9rem; margin: 0.4rem 0 1rem; }
+
+.role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+
+.role-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.1rem 0.6rem;
+  background: #fff;
+  border: 2px solid #e0e8e0;
+  border-radius: 14px;
+  transition: all var(--transition);
+}
+.role-btn:hover { border-color: var(--green-leaf); transform: translateY(-3px); }
+.role-btn.active {
+  border-color: var(--sun-gold);
+  background: linear-gradient(135deg, #fff8e7, #fff);
+  box-shadow: 0 6px 18px rgba(244,162,97,0.25);
+}
+
+.role-icon {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: var(--green-mint);
+  color: var(--green-deep);
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  transition: all var(--transition);
+}
+.role-btn.active .role-icon { background: linear-gradient(135deg, var(--sun-gold), var(--sun-amber)); color: #fff; }
+.role-btn strong { font-family: var(--font-head); font-size: 0.95rem; }
+.role-btn span { font-size: 0.74rem; opacity: 0.6; }
+
+/* ===== SIGNUP FORM ===== */
+.signup-form-section { margin-bottom: 1.2rem; }
+.signup-form-section h2 {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.field { display: flex; flex-direction: column; margin-bottom: 1rem; }
+.field label { font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--green-deep); }
+.field input {
+  padding: 0.85rem 1rem;
+  border: 2px solid #e0e8e0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+}
+.field input:focus { outline: none; border-color: var(--green-leaf); box-shadow: 0 0 0 4px rgba(64,145,108,0.12); }
+
+.pass-wrap { position: relative; }
+.pass-wrap input { width: 100%; padding-right: 3rem; }
+.pass-toggle {
+  position: absolute;
+  right: 0.8rem; top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  opacity: 0.5;
+  transition: opacity var(--transition);
+  color: var(--green-deep);
+}
+.pass-toggle:hover { opacity: 1; }
+
+/* Password strength */
+.strength-meter { margin-bottom: 1.2rem; }
+.strength-bar { height: 6px; border-radius: 6px; background: #e0e8e0; overflow: hidden; margin-bottom: 0.4rem; }
+.strength-fill { height: 100%; width: 0; border-radius: 6px; transition: all 0.4s ease; }
+.strength-fill.weak { width: 33%; background: #e76f51; }
+.strength-fill.fair { width: 66%; background: var(--sun-gold); }
+.strength-fill.strong { width: 100%; background: var(--green-leaf); }
+.strength-text { font-size: 0.78rem; color: var(--muted); font-weight: 600; }
+
+/* Terms */
+.form-options { margin-bottom: 1.2rem; font-size: 0.85rem; }
+.remember { display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; line-height: 1.5; }
+.remember input { accent-color: var(--green-leaf); margin-top: 3px; flex-shrink: 0; }
+.terms-link { color: var(--sun-amber); font-weight: 600; }
+.terms-link:hover { text-decoration: underline; }
+
+/* Submit */
+.signup-submit {
+  width: 100%;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, var(--green-forest), var(--green-leaf));
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(45,106,79,0.35);
+  transition: all var(--transition);
+}
+.signup-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(45,106,79,0.5); }
+.signup-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+
+/* Message */
+.signup-message {
+  margin-top: 1rem;
+  padding: 0.85rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  animation: fadeUp 0.4s ease;
+}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.2rem 0;
+  color: #999;
+  font-size: 0.85rem;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e0e8e0;
+}
+
+/* Social */
+.social-section { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 1.5rem; }
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.8rem;
+  background: #fff;
+  border: 2px solid #e0e8e0;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition);
+}
+.social-btn:hover { border-color: var(--green-leaf); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.social-btn span {
+  width: 22px; height: 22px;
+  display: grid; place-items: center;
+  font-weight: 700;
+  font-family: var(--font-head);
+}
+.social-btn:nth-child(1) span { color: #ea4335; }
+.social-btn:nth-child(2) span::before { content: ''; display: block; width: 14px; height: 14px; background: #000; border-radius: 50%; }
+.social-btn:nth-child(3) span { color: #1877f2; }
+
+/* Login link */
+.login-section { text-align: center; }
+.login-section p { font-size: 0.92rem; opacity: 0.8; margin-bottom: 0.5rem; }
+.login-link { color: var(--sun-amber); font-weight: 700; }
+.login-link:hover { text-decoration: underline; }
+.back-home a { color: var(--green-forest); font-weight: 600; }
+.back-home a:hover { text-decoration: underline; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  body { grid-template-columns: 1fr; overflow: auto; }
+  .signup-left { display: none; }
+  .signup-right { max-height: none; padding: 5rem 1.5rem 2rem; }
+  .signup-close { color: var(--green-deep); background: rgba(255,255,255,0.9); border-color: #e0e8e0; }
+}
+@media (max-width: 480px) {
+  .role-grid { grid-template-columns: 1fr; }
+  .social-section { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}

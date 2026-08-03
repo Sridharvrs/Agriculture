@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+    <img src="/images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
+</a>
+    <div class="nav-links">
+      <a href="index.html" data-nav>Home</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="services.html" data-nav>Services</a>
+      <a href="gallery.html" data-nav>Gallery</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn-login">Login</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header"><h3>Menu</h3><button class="drawer-close" aria-label="Close">✕</button></div>
+    <nav>
+      <a href="index.html" data-nav>Home</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="services.html" data-nav>Services</a>
+      <a href="gallery.html" data-nav>Gallery</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </nav>
+    <div class="drawer-login-wrap"><a href="login.html" class="drawer-login">Login</a></div>
+  </aside>
+
+  <!-- ===== SECTION 1: CONTACT HERO (wave divider) ===== -->
+  <section class="contact-hero">
+    <div class="ch-content">
+      <span class="eyebrow gold-eyebrow">📬 Get in Touch</span>
+      <h1>We'd Love to <span class="grad-amber">Hear From You</span></h1>
+      <p>Whether you want to join our harvest plan, partner as a farm, or just say hello — we're here and happy to help.</p>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,60 C360,100 1080,20 1440,60 L1440,100 L0,100 Z" fill="#fffdf5"/></svg>
+  </section>
+
+  <!-- ===== SECTION 2: CONTACT CARDS ===== -->
+  <section class="section contact-cards-section">
+    <div class="container">
+      <div class="cc-grid">
+        <div class="cc-card reveal">
+          <div class="cc-icon" style="background:linear-gradient(135deg,var(--green-forest),var(--green-leaf))">📍</div>
+          <h3>Visit Us</h3><p>123 Greenfield Road<br>Valley Springs, CA 95242</p>
+        </div>
+        <div class="cc-card reveal">
+          <div class="cc-icon" style="background:linear-gradient(135deg,var(--sun-amber),var(--sun-gold))">📞</div>
+          <h3>Call Us</h3><p>+1 (555) 123-4567<br>Mon–Sat, 7am–6pm</p>
+        </div>
+        <div class="cc-card reveal">
+          <div class="cc-icon" style="background:linear-gradient(135deg,var(--sky-blue),#0096c7)">✉️</div>
+          <h3>Email Us</h3><p>info@Stackly.com<br>support@Stackly.com</p>
+        </div>
+        <div class="cc-card reveal">
+          <div class="cc-icon" style="background:linear-gradient(135deg,var(--soil-brown),#a0683f)">⏰</div>
+          <h3>Farm Hours</h3><p>Mon–Sat: 7am–6pm<br>Sun: 9am–2pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: CONTACT FORM + INFO ===== -->
+  <section class="section form-section">
+    <div class="container form-grid">
+      <div class="form-left reveal">
+        <span class="eyebrow green-eyebrow">📝 Send a Message</span>
+        <h2 class="section-title">Let's Start a Conversation</h2>
+        <p class="section-sub">Fill out the form and our team will get back to you within one business day.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Jane Farmer" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')" required></div>
+            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="jane@email.com" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="+91 9865452431" oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
+            <div class="field"><label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option>General Inquiry</option>
+                <option>Harvest Plan</option>
+                <option>Farm Partnership</option>
+                <option>Farm Tour</option>
+                <option>Support</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell us how we can help..." required></textarea></div>
+          <button type="submit" class="btn-submit">Send Message →</button>
+          <p class="form-success" id="formSuccess">✓ Thank you! Your message has been sent. We'll be in touch soon.</p>
+        </form>
+      </div>
+
+      <div class="form-right reveal">
+        <div class="fr-image"><img src="/images/contact2.webp" alt="Greenhouse gardeners"></div>
+        <div class="fr-note">
+          <h3>Prefer to visit?</h3>
+          <p>Drop by the farm for a tour any Saturday — no appointment needed. Bring the family and see where your food grows!</p>
+          <a href="error.html" class="link-arrow">View our services →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: MAP ===== -->
+<section class="map-section">
+
+    <div class="container">
+
+        <div class="map-head reveal">
+
+            <span class="eyebrow gold-eyebrow">
+                🗺️ Find Us
+            </span>
+
+            <h2 class="section-title">
+                Visit Our Headquarters
+            </h2>
+
+            <p class="section-sub">
+                Come meet our agricultural experts, explore our demonstration farms,
+                and discover modern farming solutions.
+            </p>
+
+        </div>
+
+        <div class="map-wrapper reveal">
+
+            <!-- MAP -->
+
+            <div class="map-box">
+
+                <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-119.5%2C37.2%2C-119.3%2C37.4&layer=mapnik"
+                loading="lazy">
+                </iframe>
+
+                <div class="floating-badge">
+
+                    🌿 Stackly HQ
+
+                </div>
+
+            </div>
+
+            <!-- DETAILS -->
+
+            <div class="location-card">
+
+                <div class="location-item">
+
+                    <div class="loc-icon">📍</div>
+
+                    <div>
+
+                        <h4>Address</h4>
+
+                        <p>123 Greenfield Road<br>Valley Springs</p>
+
+                    </div>
+
+                </div>
+
+                <div class="location-item">
+
+                    <div class="loc-icon">📞</div>
+
+                    <div>
+
+                        <h4>Phone</h4>
+
+                        <p>+1 555 123 4567</p>
+
+                    </div>
+
+                </div>
+
+                <div class="location-item">
+
+                    <div class="loc-icon">✉️</div>
+
+                    <div>
+
+                        <h4>Email</h4>
+
+                        <p>info@Stackly.com</p>
+
+                    </div>
+
+                </div>
+
+                <div class="location-item">
+
+                    <div class="loc-icon">🕒</div>
+
+                    <div>
+
+                        <h4>Working Hours</h4>
+
+                        <p>Mon - Sat<br>7:00 AM - 6:00 PM</p>
+
+                    </div>
+
+                </div>
+
+                <a href="#" class="map-btn">
+
+                    Open Google Maps →
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+
+        <div class="map-stats reveal">
+
+            <div class="stat-box">
+
+                <h3>12,500+</h3>
+
+                <span>Farms Served</span>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>15+</h3>
+
+                <span>States Covered</span>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>2,000+</h3>
+
+                <span>Partner Farmers</span>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>2014</h3>
+
+                <span>Established</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- ===== SECTION 5: NEWSLETTER ===== -->
+  <section class="section newsletter-section">
+    <div class="container nl-box reveal">
+      <div class="nl-text">
+        <span class="eyebrow green-eyebrow">📰 Stay Updated</span>
+        <h2>Join Our Harvest Newsletter</h2>
+        <p>Seasonal recipes, farm news, and exclusive member offers — delivered monthly.</p>
+      </div>
+      <form class="nl-form" id="nlForm">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="nl-success" id="nlSuccess">✓ You're subscribed! Welcome to the Stackly family.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: QUICK FAQ ===== -->
+  <section class="section quick-faq-section">
+    <div class="container">
+      <div class="qf-head reveal">
+        <span class="eyebrow gold-eyebrow">⚡ Quick Answers</span>
+        <h2 class="section-title">Before You Ask</h2>
+      </div>
+      <div class="qf-grid">
+        <div class="qf-item reveal"><h3>Do you offer farm tours?</h3><p>Yes! Free tours every Saturday at 10am. Just show up at the main gate.</p></div>
+        <div class="qf-item reveal"><h3>How do I cancel my plan?</h3><p>No contracts — pause or cancel anytime from your account or by emailing us.</p></div>
+        <div class="qf-item reveal"><h3>Can I partner as a farmer?</h3><p>Absolutely. Reach out via the form and select "Farm Partnership" as the topic.</p></div>
+        <div class="qf-item reveal"><h3>Is parking available?</h3><p>Yes, free on-site parking for all visitors and tour guests.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" data-footer></footer>
+  <script src="js/common.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

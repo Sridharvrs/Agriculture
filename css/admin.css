@@ -1,0 +1,165 @@
+/* ============================================================
+   AgroHarvest — Admin Dashboard (unique styles)
+   ============================================================ */
+
+/* Admin sidebar gets a deep blue-green accent */
+.admin-sidebar { background: linear-gradient(180deg, #1a3a4a 0%, #0d2030 100%); }
+.admin-sidebar .nav-item.active { background: linear-gradient(135deg, var(--sky-blue), #0096c7); }
+
+.admin-2col { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.2rem; margin-top: 1.2rem; }
+
+/* ===== BAR CHART (admin variant — CSS vars for height) ===== */
+.admin-chart { display: flex; align-items: flex-end; gap: 0.8rem; height: 220px; }
+.ac-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+.ac-bar {
+  width: 100%;
+  height: var(--h);
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(180deg, var(--green-light), var(--green-leaf));
+  display: flex; align-items: flex-start; justify-content: center;
+  transition: height 0.6s ease;
+  position: relative;
+}
+.ac-bar span { font-size: 0.7rem; font-weight: 700; color: #fff; margin-top: 6px; }
+.ac-bar.active { background: linear-gradient(180deg, var(--sky-blue), #0096c7); }
+.ac-col small { margin-top: 0.5rem; font-size: 0.78rem; color: var(--muted); }
+
+/* ===== DONUT CHART (pure CSS) ===== */
+.donut-wrap { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+.donut {
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--green-leaf) 0% 76.6%,
+    var(--sun-gold) 76.6% 88.5%,
+    var(--sky-blue) 88.5% 88.9%,
+    var(--soil-brown) 88.9% 100%
+  );
+  display: grid; place-items: center;
+  position: relative;
+}
+.donut::before {
+  content: '';
+  width: 110px; height: 110px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+.donut-center { position: relative; z-index: 1; text-align: center; }
+.donut-center strong { display: block; font-family: var(--font-head); font-size: 1.4rem; }
+.donut-center span { font-size: 0.78rem; color: var(--muted); }
+
+.donut-legend { display: grid; gap: 0.6rem; }
+.dl-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; }
+.dl-dot { width: 12px; height: 12px; border-radius: 3px; }
+.dl-item strong { margin-left: auto; font-family: var(--font-head); }
+
+/* ===== USER FILTERS ===== */
+.user-filters { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.uf-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  background: #fff;
+  border: 2px solid var(--line);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--ink);
+  transition: all var(--transition);
+}
+.uf-btn span { background: var(--green-mint); color: var(--green-deep); padding: 0.1rem 0.5rem; border-radius: 20px; font-size: 0.76rem; }
+.uf-btn:hover { border-color: var(--green-light); }
+.uf-btn.active { background: linear-gradient(135deg, var(--green-forest), var(--green-leaf)); color: #fff; border-color: transparent; }
+.uf-btn.active span { background: rgba(255,255,255,0.25); color: #fff; }
+
+/* ===== FARM CARDS ===== */
+.farm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1.2rem; }
+.farm-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: all var(--transition); }
+.farm-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.fc-header { display: flex; align-items: center; justify-content: space-between; padding: 1.3rem; color: #fff; font-size: 1.8rem; }
+.fc-body { padding: 1.3rem; }
+.fc-body h3 { font-family: var(--font-head); margin-bottom: 0.3rem; }
+.fc-loc { font-size: 0.86rem; color: var(--muted); margin-bottom: 0.8rem; }
+.fc-row { display: flex; justify-content: space-between; font-size: 0.86rem; padding: 0.3rem 0; border-bottom: 1px solid var(--line); }
+.fc-row:last-child { border-bottom: none; }
+.fc-row span:first-child { color: var(--muted); }
+.fc-row strong { font-weight: 600; }
+
+/* Mini buttons */
+.btn-mini { padding: 0.35rem 0.8rem; border-radius: 8px; font-size: 0.78rem; font-weight: 600; transition: all var(--transition); }
+.btn-mini.approve { background: var(--green-mint); color: var(--green-deep); }
+.btn-mini.approve:hover { background: var(--green-leaf); color: #fff; }
+.btn-mini.deny { background: #ffe8de; color: #c0392b; }
+.btn-mini.deny:hover { background: var(--sun-amber); color: #fff; }
+
+/* ===== REPORTS ===== */
+.report-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+.report-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  cursor: pointer;
+  text-align: center;
+}
+.report-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.rc-icon { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; font-size: 1.8rem; color: #fff; margin: 0 auto 1rem; }
+.report-card h3 { font-family: var(--font-head); margin-bottom: 0.4rem; }
+.report-card p { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+.rc-action { color: var(--sun-amber); font-weight: 700; font-size: 0.88rem; }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.metric-box { background: #f4f8f4; border-radius: 12px; padding: 1.2rem; }
+.metric-box strong { display: block; font-family: var(--font-head); font-size: 1.6rem; }
+.metric-box span { font-size: 0.82rem; color: var(--muted); display: block; margin-bottom: 0.6rem; }
+
+/* ===== SETTINGS ===== */
+.settings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.2rem; }
+.setting-row { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+.setting-row:last-of-type { border-bottom: none; }
+.setting-row strong { font-size: 0.92rem; display: block; }
+.setting-row small { font-size: 0.78rem; color: var(--muted); }
+.set-input { width: 80px; padding: 0.4rem 0.6rem; border: 2px solid var(--line); border-radius: 8px; font-family: inherit; font-weight: 600; text-align: right; }
+.set-input:focus { outline: none; border-color: var(--green-leaf); }
+
+/* Toggle switch */
+.toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+.toggle-row:last-child { border-bottom: none; }
+.toggle-row strong { font-size: 0.92rem; display: block; }
+.toggle-row small { font-size: 0.78rem; color: var(--muted); }
+.switch { position: relative; width: 46px; height: 26px; flex-shrink: 0; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; inset: 0;
+  background: #ccc;
+  border-radius: 26px;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.slider::before {
+  content: '';
+  position: absolute;
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: all var(--transition);
+}
+.switch input:checked + .slider { background: var(--green-leaf); }
+.switch input:checked + .slider::before { transform: translateX(20px); }
+
+/* System health */
+.health-row { display: flex; align-items: center; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+.health-row:last-child { border-bottom: none; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .admin-2col { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .admin-chart { gap: 0.4rem; }
+  .admin-chart .ac-bar span { display: none; }
+}

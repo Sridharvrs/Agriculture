@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Farmer Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/farmer.css">
+</head>
+<body>
+
+  <div class="dash">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar farmer-sidebar">
+      <a href="farmer.html" class="nav-brand">
+    <img src="/images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
+</a>
+      <div class="sidebar-role">Farmer Panel</div>
+      <nav class="sidebar-nav">
+        <div class="nav-item active" data-module="overview"><span class="ni-icon">📈</span><span class="ni-label">Farm Overview</span></div>
+        <div class="nav-item" data-module="crops"><span class="ni-icon">🌱</span><span class="ni-label">My Crops</span></div>
+        <div class="nav-item" data-module="tasks"><span class="ni-icon">✅</span><span class="ni-label">Field Tasks</span><span class="ni-badge">7</span></div>
+        <div class="nav-item" data-module="weather"><span class="ni-icon">🌤️</span><span class="ni-label">Weather</span></div>
+        <div class="nav-item" data-module="sales"><span class="ni-icon">💵</span><span class="ni-label">Sales & Orders</span></div>
+        <div class="nav-item" data-module="equipment"><span class="ni-icon">🚜</span><span class="ni-label">Equipment</span></div>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn-logout">⏻ Logout</button>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay"></div>
+
+    <!-- ===== MAIN ===== -->
+    <div class="dash-main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+          <span class="topbar-title">Farm Overview</span>
+        </div>
+        <div class="topbar-right">
+          <div class="topbar-search"><span class="ts-icon">🔍</span><input type="text" placeholder="Search crops..."></div>
+          <button class="topbar-icon-btn">🔔<span class="dot"></span></button>
+          <div class="topbar-user">
+            <div class="tu-avatar gold">MK</div>
+            <div class="tu-info"><strong>Marcus</strong><span>Farmer</span></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dash-content">
+
+        <!-- ===== MODULE 1: FARM OVERVIEW ===== -->
+        <section class="module active" data-module="overview">
+          <div class="module-head">
+            <h1>Good morning, <span class="profileName">Guest</span>! 🌅</h1>
+            <p>Klein Family Farm · 180 acres · Valley Springs</p>
+          </div>
+
+          <div class="cards-grid cg-4">
+            <div class="stat-card reveal"><div class="sc-top"><div class="sc-icon">🌱</div><span class="sc-trend up">Growing</span></div><div class="sc-value">8</div><div class="sc-label">Active Crops</div></div>
+            <div class="stat-card gold reveal"><div class="sc-top"><div class="sc-icon">📦</div><span class="sc-trend up">+12%</span></div><div class="sc-value">2.4t</div><div class="sc-label">Harvest This Month</div></div>
+            <div class="stat-card amber reveal"><div class="sc-top"><div class="sc-icon">💵</div><span class="sc-trend up">+8%</span></div><div class="sc-value">$14.2K</div><div class="sc-label">Revenue (July)</div></div>
+            <div class="stat-card blue reveal"><div class="sc-top"><div class="sc-icon">✅</div><span class="sc-trend up">3 due</span></div><div class="sc-value">7</div><div class="sc-label">Pending Tasks</div></div>
+          </div>
+
+          <div class="farmer-2col">
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Crop Health Overview</h3></div>
+              <div class="panel-body">
+                <div class="crop-health">
+                  <div class="ch-row"><div class="ch-info"><span>🍅 Tomatoes</span><small>12 acres · Field A</small></div><div class="progress"><div class="bar" style="width:88%"></div></div><span class="ch-pct">88%</span></div>
+                  <div class="ch-row"><div class="ch-info"><span>🥕 Carrots</span><small>8 acres · Field B</small></div><div class="progress"><div class="bar gold" style="width:72%"></div></div><span class="ch-pct">72%</span></div>
+                  <div class="ch-row"><div class="ch-info"><span>🥬 Kale</span><small>5 acres · Field C</small></div><div class="progress"><div class="bar" style="width:94%"></div></div><span class="ch-pct">94%</span></div>
+                  <div class="ch-row"><div class="ch-info"><span>🌽 Corn</span><small>40 acres · Field D</small></div><div class="progress"><div class="bar blue" style="width:65%"></div></div><span class="ch-pct">65%</span></div>
+                  <div class="ch-row"><div class="ch-info"><span>🍎 Apples</span><small>15 acres · Orchard</small></div><div class="progress"><div class="bar" style="width:81%"></div></div><span class="ch-pct">81%</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Today's Priorities</h3></div>
+              <div class="panel-body">
+                <div class="priority-list">
+                  <div class="pr-item urgent"><span class="pr-flag">🔴</span><div><strong>Irrigate Field A</strong><small>Tomatoes need water before noon heat</small></div><span class="pr-time">8:00 AM</span></div>
+                  <div class="pr-item"><span class="pr-flag">🟡</span><div><strong>Check soil sensors — Field D</strong><small>Moisture reading due</small></div><span class="pr-time">10:00 AM</span></div>
+                  <div class="pr-item"><span class="pr-flag">🟢</span><div><strong>Harvest kale — Field C</strong><small>Ready for Stackly pickup</small></div><span class="pr-time">2:00 PM</span></div>
+                  <div class="pr-item"><span class="pr-flag">🟡</span><div><strong>Repair fence — east pasture</strong><small>Reported by night watch</small></div><span class="pr-time">4:00 PM</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Revenue Trend (Last 6 Months)</h3></div>
+            <div class="panel-body">
+              <div class="bar-chart">
+                <div class="bc-col"><div class="bc-bar" style="height:45%"><span>$9.1K</span></div><small>Feb</small></div>
+                <div class="bc-col"><div class="bc-bar" style="height:55%"><span>$11.2K</span></div><small>Mar</small></div>
+                <div class="bc-col"><div class="bc-bar" style="height:62%"><span>$12.6K</span></div><small>Apr</small></div>
+                <div class="bc-col"><div class="bc-bar" style="height:58%"><span>$11.8K</span></div><small>May</small></div>
+                <div class="bc-col"><div class="bc-bar" style="height:68%"><span>$13.1K</span></div><small>Jun</small></div>
+                <div class="bc-col"><div class="bc-bar active" style="height:74%"><span>$14.2K</span></div><small>Jul</small></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 2: MY CROPS ===== -->
+        <section class="module" data-module="crops">
+          <div class="module-head">
+            <h1>My Crops 🌱</h1>
+            <p>Track every crop from planting to harvest across your fields.</p>
+          </div>
+          <div class="crop-cards">
+            <div class="crop-card reveal">
+              <div class="cc-top" style="background:linear-gradient(135deg,#e76f51,#f4a261)"><span>🍅</span><span class="badge green">Healthy</span></div>
+              <div class="cc-body"><h3>Heirloom Tomatoes</h3><div class="cc-row"><span>📍 Field A</span><span>12 acres</span></div><div class="cc-row"><span>📅 Planted May 2</span><span class="badge gold">Harvest Aug 15</span></div><div class="progress" style="margin-top:0.6rem"><div class="bar" style="width:88%"></div></div><small style="display:block;margin-top:0.4rem;color:var(--muted)">88% to harvest</small></div>
+            </div>
+            <div class="crop-card reveal">
+              <div class="cc-top" style="background:linear-gradient(135deg,#f4a261,#ffd166)"><span>🥕</span><span class="badge green">Healthy</span></div>
+              <div class="cc-body"><h3>Rainbow Carrots</h3><div class="cc-row"><span>📍 Field B</span><span>8 acres</span></div><div class="cc-row"><span>📅 Planted Jun 10</span><span class="badge gold">Harvest Sep 1</span></div><div class="progress" style="margin-top:0.6rem"><div class="bar gold" style="width:72%"></div></div><small style="display:block;margin-top:0.4rem;color:var(--muted)">72% to harvest</small></div>
+            </div>
+            <div class="crop-card reveal">
+              <div class="cc-top" style="background:linear-gradient(135deg,#40916c,#2d6a4f)"><span>🥬</span><span class="badge green">Ready</span></div>
+              <div class="cc-body"><h3>Curly Kale</h3><div class="cc-row"><span>📍 Field C</span><span>5 acres</span></div><div class="cc-row"><span>📅 Planted Jun 20</span><span class="badge green">Harvest Today</span></div><div class="progress" style="margin-top:0.6rem"><div class="bar" style="width:94%"></div></div><small style="display:block;margin-top:0.4rem;color:var(--muted)">94% to harvest</small></div>
+            </div>
+            <div class="crop-card reveal">
+              <div class="cc-top" style="background:linear-gradient(135deg,#48cae4,#0096c7)"><span>🌽</span><span class="badge gold">Watch</span></div>
+              <div class="cc-body"><h3>Sweet Corn</h3><div class="cc-row"><span>📍 Field D</span><span>40 acres</span></div><div class="cc-row"><span>📅 Planted Apr 15</span><span class="badge gold">Harvest Aug 20</span></div><div class="progress" style="margin-top:0.6rem"><div class="bar blue" style="width:65%"></div></div><small style="display:block;margin-top:0.4rem;color:var(--muted)">65% to harvest — needs water</small></div>
+            </div>
+            <div class="crop-card reveal">
+              <div class="cc-top" style="background:linear-gradient(135deg,#95d5b2,#40916c)"><span>🍎</span><span class="badge green">Healthy</span></div>
+              <div class="cc-body"><h3>Crisp Apples</h3><div class="cc-row"><span>📍 Orchard</span><span>15 acres</span></div><div class="cc-row"><span>📅 Year-round</span><span class="badge gold">Pick Aug 10</span></div><div class="progress" style="margin-top:0.6rem"><div class="bar" style="width:81%"></div></div><small style="display:block;margin-top:0.4rem;color:var(--muted)">81% to harvest</small></div>
+            </div>
+            <div class="crop-card reveal">
+              <div class="cc-top" style="background:linear-gradient(135deg,#774936,#a0683f)"><span>🫐</span><span class="badge green">Healthy</span></div>
+              <div class="cc-body"><h3>Blueberries</h3><div class="cc-row"><span>📍 Patch E</span><span>3 acres</span></div><div class="cc-row"><span>📅 Perennial</span><span class="badge green">Picking now</span></div><div class="progress" style="margin-top:0.6rem"><div class="bar" style="width:100%"></div></div><small style="display:block;margin-top:0.4rem;color:var(--muted)">Harvesting daily</small></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 3: FIELD TASKS ===== -->
+        <section class="module" data-module="tasks">
+          <div class="module-head">
+            <h1>Field Tasks ✅</h1>
+            <p>Your daily and upcoming farm operations.</p>
+          </div>
+
+          <div class="task-progress-banner reveal">
+            <div class="tpb-left"><strong>Today's Progress</strong><span>3 of 8 tasks completed</span></div>
+            <div class="tpb-bar"><div class="progress"><div class="bar" style="width:37.5%"></div></div></div>
+            <span class="tpb-pct">37%</span>
+          </div>
+
+          <div class="task-board">
+            <div class="task-col">
+              <div class="tc-head"><h3>📋 To Do</h3><span class="badge gray">5</span></div>
+              <div class="task-item reveal"><div class="ti-top"><strong>Irrigate Field A</strong><span class="badge amber">Urgent</span></div><p>Tomatoes need water before noon heat</p><div class="ti-meta"><span>⏰ 8:00 AM</span><span>📍 Field A</span></div></div>
+              <div class="task-item reveal"><div class="ti-top"><strong>Check soil sensors</strong><span class="badge gold">Medium</span></div><p>Moisture readings due in Field D</p><div class="ti-meta"><span>⏰ 10:00 AM</span><span>📍 Field D</span></div></div>
+              <div class="task-item reveal"><div class="ti-top"><strong>Harvest kale</strong><span class="badge green">Normal</span></div><p>Ready for Stackly pickup</p><div class="ti-meta"><span>⏰ 2:00 PM</span><span>📍 Field C</span></div></div>
+              <div class="task-item reveal"><div class="ti-top"><strong>Repair east fence</strong><span class="badge gold">Medium</span></div><p>Reported broken by night watch</p><div class="ti-meta"><span>⏰ 4:00 PM</span><span>📍 Pasture</span></div></div>
+              <div class="task-item reveal"><div class="ti-top"><strong>Order seed — winter rye</strong><span class="badge gray">Low</span></div><p>Cover crop for fall rotation</p><div class="ti-meta"><span>⏰ 5:00 PM</span><span>📍 Office</span></div></div>
+            </div>
+            <div class="task-col">
+              <div class="tc-head"><h3>✅ Done Today</h3><span class="badge green">3</span></div>
+              <div class="task-item done reveal"><div class="ti-top"><strong>Feed chickens</strong><span class="badge green">Done</span></div><p>Morning feed complete</p><div class="ti-meta"><span>⏰ 6:30 AM</span><span>📍 Coop</span></div></div>
+              <div class="task-item done reveal"><div class="ti-top"><strong>Milk cows</strong><span class="badge green">Done</span></div><p>14 gallons collected</p><div class="ti-meta"><span>⏰ 6:45 AM</span><span>📍 Dairy</span></div></div>
+              <div class="task-item done reveal"><div class="ti-top"><strong>Check bee hives</strong><span class="badge green">Done</span></div><p>Hives healthy, honey ready soon</p><div class="ti-meta"><span>⏰ 7:15 AM</span><span>📍 Apiary</span></div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 4: WEATHER ===== -->
+        <section class="module" data-module="weather">
+          <div class="module-head">
+            <h1>Farm Weather 🌤️</h1>
+            <p>Plan your day around Valley Springs conditions.</p>
+          </div>
+
+          <div class="weather-main reveal">
+            <div class="wm-left">
+              <div class="wm-temp">78°<span>F</span></div>
+              <div class="wm-cond">☀️ Sunny · Perfect field day</div>
+              <div class="wm-meta"><span>💧 Humidity 42%</span><span>💨 Wind 8mph NW</span><span>👁️ UV 7</span></div>
+            </div>
+            <div class="wm-right">
+              <div class="wm-tip"><strong>🌱 Farmer's Tip</strong><p>Great day to irrigate Fields A & D before noon. Low wind means safe spraying conditions this afternoon.</p></div>
+            </div>
+          </div>
+
+          <div class="forecast-grid">
+            <div class="fc-card today reveal"><span class="fc-day">Today</span><span class="fc-icon">☀️</span><span class="fc-temp">78°</span><small>Sunny</small></div>
+            <div class="fc-card reveal"><span class="fc-day">Wed</span><span class="fc-icon">⛅</span><span class="fc-temp">75°</span><small>Partly cloudy</small></div>
+            <div class="fc-card reveal"><span class="fc-day">Thu</span><span class="fc-icon">🌦️</span><span class="fc-temp">71°</span><small>Light rain</small></div>
+            <div class="fc-card reveal"><span class="fc-day">Fri</span><span class="fc-icon">🌧️</span><span class="fc-temp">68°</span><small>Rain</small></div>
+            <div class="fc-card reveal"><span class="fc-day">Sat</span><span class="fc-icon">⛅</span><span class="fc-temp">73°</span><small>Clearing</small></div>
+            <div class="fc-card reveal"><span class="fc-day">Sun</span><span class="fc-icon">☀️</span><span class="fc-temp">79°</span><small>Sunny</small></div>
+            <div class="fc-card reveal"><span class="fc-day">Mon</span><span class="fc-icon">☀️</span><span class="fc-temp">82°</span><small>Hot</small></div>
+          </div>
+
+          <div class="farmer-2col" style="margin-top:1.2rem">
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Soil Moisture by Field</h3></div>
+              <div class="panel-body">
+                <div class="soil-read">
+                  <div class="sr-row"><span>Field A (Tomatoes)</span><div class="progress"><div class="bar" style="width:34%"></div></div><span class="sr-val low">34% — Dry</span></div>
+                  <div class="sr-row"><span>Field B (Carrots)</span><div class="progress"><div class="bar" style="width:61%"></div></div><span class="sr-val">61% — Good</span></div>
+                  <div class="sr-row"><span>Field C (Kale)</span><div class="progress"><div class="bar" style="width:78%"></div></div><span class="sr-val">78% — Optimal</span></div>
+                  <div class="sr-row"><span>Field D (Corn)</span><div class="progress"><div class="bar blue" style="width:28%"></div></div><span class="sr-val low">28% — Dry</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Weather Alerts</h3></div>
+              <div class="panel-body">
+                <div class="alert-item rain"><span>🌧️</span><div><strong>Rain expected Thursday</strong><small>0.6" forecast — plan harvesting before</small></div></div>
+                <div class="alert-item heat"><span>🔥</span><div><strong>Heat wave Monday</strong><small>82°+ — increase irrigation Sunday evening</small></div></div>
+                <div class="alert-item wind"><span>💨</span><div><strong>Calm winds today</strong><small>Safe window for spraying 2–5 PM</small></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 5: SALES & ORDERS ===== -->
+        <section class="module" data-module="sales">
+          <div class="module-head">
+            <h1>Sales & Orders 💵</h1>
+            <p>Orders from Stackly and direct buyers.</p>
+          </div>
+          <div class="cards-grid cg-4">
+            <div class="stat-card reveal"><div class="sc-top"><div class="sc-icon">💰</div><span class="sc-trend up">+8%</span></div><div class="sc-value">$14.2K</div><div class="sc-label">July Revenue</div></div>
+            <div class="stat-card gold reveal"><div class="sc-top"><div class="sc-icon">📦</div><span class="sc-trend up">+5</span></div><div class="sc-value">38</div><div class="sc-label">Orders This Month</div></div>
+            <div class="stat-card amber reveal"><div class="sc-top"><div class="sc-icon">⏳</div></div><div class="sc-value">6</div><div class="sc-label">Pending Pickup</div></div>
+            <div class="stat-card blue reveal"><div class="sc-top"><div class="sc-icon">⭐</div><span class="sc-trend up">4.8</span></div><div class="sc-value">96%</div><div class="sc-label">Fulfillment Rate</div></div>
+          </div>
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Active Orders</h3><span class="ph-action">Export CSV →</span></div>
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>Order</th><th>Buyer</th><th>Crop</th><th>Qty</th><th>Total</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>SO-1042</strong></td><td>Stackly Coop</td><td>🥬 Kale</td><td>200 lb</td><td>$640</td><td><span class="badge gold">Pickup Today</span></td></tr>
+                  <tr><td><strong>SO-1041</strong></td><td>Valley Market</td><td>🍅 Tomatoes</td><td>150 lb</td><td>$525</td><td><span class="badge blue">In Transit</span></td></tr>
+                  <tr><td><strong>SO-1040</strong></td><td>Stackly Coop</td><td>🫐 Blueberries</td><td>80 lb</td><td>$480</td><td><span class="badge green">Delivered</span></td></tr>
+                  <tr><td><strong>SO-1039</strong></td><td>Farm Stand</td><td>🥕 Carrots</td><td>120 lb</td><td>$360</td><td><span class="badge green">Delivered</span></td></tr>
+                  <tr><td><strong>SO-1038</strong></td><td>Stackly Coop</td><td>🥬 Kale</td><td>180 lb</td><td>$576</td><td><span class="badge green">Delivered</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="farmer-2col" style="margin-top:1.2rem">
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Top Crops by Revenue</h3></div>
+              <div class="panel-body">
+                <div class="rev-row"><span>🍅 Tomatoes</span><div class="progress"><div class="bar" style="width:90%"></div></div><strong>$4.8K</strong></div>
+                <div class="rev-row"><span>🥬 Kale</span><div class="progress"><div class="bar gold" style="width:72%"></div></div><strong>$3.2K</strong></div>
+                <div class="rev-row"><span>🫐 Blueberries</span><div class="progress"><div class="bar" style="width:58%"></div></div><strong>$2.6K</strong></div>
+                <div class="rev-row"><span>🥕 Carrots</span><div class="progress"><div class="bar blue" style="width:44%"></div></div><strong>$1.9K</strong></div>
+                <div class="rev-row"><span>🍎 Apples</span><div class="progress"><div class="bar" style="width:38%"></div></div><strong>$1.7K</strong></div>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Quick Actions</h3></div>
+              <div class="panel-body">
+                <div class="qa-grid">
+                  <button class="qa-btn" onclick="showToast('New order form opened!')"><span>📋</span> Log New Sale</button>
+                  <button class="qa-btn" onclick="showToast('Inventory updated!')"><span>📦</span> Update Inventory</button>
+                  <button class="qa-btn" onclick="showToast('Price list updated!')"><span>💲</span> Set Crop Prices</button>
+                  <button class="qa-btn" onclick="showToast('Report generated!')"><span>📊</span> Monthly Report</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 6: EQUIPMENT ===== -->
+        <section class="module" data-module="equipment">
+          <div class="module-head">
+            <h1>Equipment 🚜</h1>
+            <p>Track and maintain your farm machinery.</p>
+          </div>
+          <div class="equip-grid">
+            <div class="equip-card reveal">
+              <div class="eq-img" style="background:linear-gradient(135deg,#40916c,#2d6a4f)">🚜</div>
+              <div class="eq-body"><h3>John Deere 5075E</h3><div class="eq-row"><span>Status</span><span class="badge green">Operational</span></div><div class="eq-row"><span>Hours</span><span>1,240 hrs</span></div><div class="eq-row"><span>Last service</span><span>Jun 12, 2026</span></div><div class="eq-row"><span>Next service</span><span class="badge gold">Sep 12 (200h)</span></div></div>
+            </div>
+            <div class="equip-card reveal">
+              <div class="eq-img" style="background:linear-gradient(135deg,#48cae4,#0096c7)">🛰️</div>
+              <div class="eq-body"><h3>Survey Drone</h3><div class="eq-row"><span>Status</span><span class="badge green">Operational</span></div><div class="eq-row"><span>Flights</span><span>89 flights</span></div><div class="eq-row"><span>Last flight</span><span>Jul 29, 2026</span></div><div class="eq-row"><span>Next service</span><span class="badge green">Nov 2026</span></div></div>
+            </div>
+            <div class="equip-card reveal">
+              <div class="eq-img" style="background:linear-gradient(135deg,#f4a261,#e76f51)">💦</div>
+              <div class="eq-body"><h3>Irrigation Pump</h3><div class="eq-row"><span>Status</span><span class="badge amber">Needs filter clean</span></div><div class="eq-row"><span>Runtime</span><span>3,200 hrs</span></div><div class="eq-row"><span>Last service</span><span>May 28, 2026</span></div><div class="eq-row"><span>Next service</span><span class="badge amber">This week</span></div></div>
+            </div>
+            <div class="equip-card reveal">
+              <div class="eq-img" style="background:linear-gradient(135deg,#774936,#a0683f)">🌽</div>
+              <div class="eq-body"><h3>Corn Harvester</h3><div class="eq-row"><span>Status</span><span class="badge gray">In storage</span></div><div class="eq-row"><span>Hours</span><span>680 hrs</span></div><div class="eq-row"><span>Last service</span><span>Mar 3, 2026</span></div><div class="eq-row"><span>Next service</span><span class="badge gold">Aug 10 (pre-harvest)</span></div></div>
+            </div>
+          </div>
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Maintenance Schedule</h3><span class="ph-action">+ Add Task</span></div>
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>Equipment</th><th>Task</th><th>Due Date</th><th>Priority</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>💦 Irrigation Pump</td><td>Filter cleaning</td><td>Aug 1, 2026</td><td><span class="badge amber">High</span></td><td><span class="badge gold">Scheduled</span></td></tr>
+                  <tr><td>🚜 Tractor 5075E</td><td>Oil change</td><td>Sep 12, 2026</td><td><span class="badge gold">Medium</span></td><td><span class="badge gray">Pending</span></td></tr>
+                  <tr><td>🌽 Corn Harvester</td><td>Pre-harvest check</td><td>Aug 10, 2026</td><td><span class="badge gold">Medium</span></td><td><span class="badge gray">Pending</span></td></tr>
+                  <tr><td>🛰️ Drone</td><td>Battery replacement</td><td>Nov 5, 2026</td><td><span class="badge gray">Low</span></td><td><span class="badge gray">Pending</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/farmer.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+
+  <!-- Close button -->
+  <a href="index.html" class="signup-close" aria-label="Close and go home">✕</a>
+
+  <!-- ===== LEFT VISUAL PANEL ===== -->
+  <div class="signup-left">
+    <div class="sl-overlay"></div>
+    <div class="sl-content">
+      <a href="index.html" class="sl-brand"><span class="leaf-icon">🌿</span> Stackly</a>
+      <h1>Join the <span class="grad-amber">Harvest</span> Family</h1>
+      <p>Create your account and start enjoying fresh, organic produce delivered from our fields to your door.</p>
+      <ul class="sl-perks">
+        <li><span><i class="fa-solid fa-check"></i></span> Weekly customizable harvest boxes</li>
+        <li><span><i class="fa-solid fa-check"></i></span> Farm-to-table delivery in 24 hours</li>
+        <li><span><i class="fa-solid fa-check"></i></span> Exclusive member recipes & events</li>
+        <li><span><i class="fa-solid fa-check"></i></span> Support sustainable local farming</li>
+      </ul>
+      <div class="sl-trust">
+        <div class="sl-avatars">
+          <div class="sl-av" style="background:linear-gradient(135deg,#40916c,#2d6a4f)">JF</div>
+          <div class="sl-av" style="background:linear-gradient(135deg,#e76f51,#f4a261)">MK</div>
+          <div class="sl-av" style="background:linear-gradient(135deg,#48cae4,#0096c7)">AP</div>
+          <div class="sl-av" style="background:linear-gradient(135deg,#774936,#a0683f)">LR</div>
+        </div>
+        <span>Join 2,800+ happy members</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RIGHT FORM AREA ===== -->
+  <div class="signup-right">
+
+    <!-- Role selector -->
+    <div class="role-section">
+      <span class="eyebrow gold-eyebrow">👥 Choose Your Role</span>
+      <p class="role-hint">Select how you'd like to join</p>
+      <div class="role-grid">
+        <button class="role-btn active" data-role="member">
+          <div class="role-icon"><i class="fa-solid fa-seedling"></i></div>
+          <strong>Member</strong><span>Harvest subscriber</span>
+        </button>
+        <button class="role-btn" data-role="farmer">
+          <div class="role-icon"><i class="fa-solid fa-tractor"></i></div>
+          <strong>Farmer</strong><span>Partner farm</span>
+        </button>
+        <button class="role-btn" data-role="admin">
+          <div class="role-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <strong>Admin</strong><span>Platform staff</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Signup form -->
+    <div class="signup-form-section">
+      <h2>Create Your Account</h2>
+      <form id="signupForm" novalidate>
+
+        <div class="field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Farmer" autocomplete="name" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')">
+        </div>
+
+        <div class="field">
+          <label for="email" id="emailLabel">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pass-wrap">
+              <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="new-password">
+              <button type="button" class="pass-toggle" id="togglePassword" aria-label="Show password">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="pass-wrap">
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••" autocomplete="new-password">
+              <button type="button" class="pass-toggle" id="toggleConfirmPassword" aria-label="Show password">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Password strength indicator -->
+        <div class="strength-meter" id="strengthMeter">
+          <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+          <span class="strength-text" id="strengthText">Enter a password</span>
+        </div>
+
+        <div class="form-options">
+          <label class="remember">
+            <input type="checkbox">
+            <span>I agree to the <a href="#" class="terms-link">Terms</a> & <a href="#" class="terms-link">Privacy Policy</a></span>
+          </label>
+        </div>
+
+        <button type="submit" class="signup-submit">Create Account →</button>
+
+        <div class="signup-message" id="signupMessage" hidden></div>
+      </form>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"><span>or sign up with</span></div>
+
+    <!-- Social -->
+    <div class="social-section">
+      <button class="social-btn"><span>G</span> Google</button>
+      <button class="social-btn"><span></span> Apple</button>
+      <button class="social-btn"><span>f</span> Facebook</button>
+    </div>
+
+    <!-- Login link -->
+    <div class="login-section">
+      <p>Already have an account? <a href="login.html" class="login-link">Sign in here</a></p>
+      <p class="back-home"><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a></p>
+    </div>
+
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>

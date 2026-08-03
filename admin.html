@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <div class="dash">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar admin-sidebar">
+      <a href="admin.html" class="nav-brand">
+    <img src="/images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
+</a>
+      <div class="sidebar-role">Admin Panel</div>
+      <nav class="sidebar-nav">
+        <div class="nav-item active" data-module="overview"><span class="ni-icon">📈</span><span class="ni-label">Platform Overview</span></div>
+        <div class="nav-item" data-module="users"><span class="ni-icon">👥</span><span class="ni-label">User Management</span></div>
+        <div class="nav-item" data-module="farms"><span class="ni-icon">🌾</span><span class="ni-label">Farm Registry</span></div>
+        <div class="nav-item" data-module="orders"><span class="ni-icon">📦</span><span class="ni-label">All Orders</span><span class="ni-badge">14</span></div>
+        <div class="nav-item" data-module="reports"><span class="ni-icon">📋</span><span class="ni-label">Reports</span></div>
+        <div class="nav-item" data-module="settings"><span class="ni-icon">⚙️</span><span class="ni-label">Settings</span></div>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn-logout">⏻ Logout</button>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay"></div>
+
+    <!-- ===== MAIN ===== -->
+    <div class="dash-main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+          <span class="topbar-title">Platform Overview</span>
+        </div>
+        <div class="topbar-right">
+          <div class="topbar-search"><span class="ts-icon">🔍</span><input type="text" placeholder="Search users, farms..."></div>
+          <button class="topbar-icon-btn">🔔<span class="dot"></span></button>
+          <div class="topbar-user">
+            <div class="tu-avatar blue">SO</div>
+            <div class="tu-info"><strong>Sara</strong><span>Admin</span></div>
+          </div>
+        </div>
+      </header>
+
+      <main class="dash-content">
+
+        <!-- ===== MODULE 1: PLATFORM OVERVIEW ===== -->
+        <section class="module active" data-module="overview">
+          <div class="module-head">
+            <h1>Platform Overview 📈</h1>
+            <p>Stackly ecosystem health at a glance.</p>
+          </div>
+
+          <div class="cards-grid cg-4">
+            <div class="stat-card reveal"><div class="sc-top"><div class="sc-icon">👥</div><span class="sc-trend up">+124</span></div><div class="sc-value">2,847</div><div class="sc-label">Total Members</div></div>
+            <div class="stat-card gold reveal"><div class="sc-top"><div class="sc-icon">🌾</div><span class="sc-trend up">+8</span></div><div class="sc-value">340</div><div class="sc-label">Partner Farms</div></div>
+            <div class="stat-card amber reveal"><div class="sc-top"><div class="sc-icon">📦</div><span class="sc-trend up">+12%</span></div><div class="sc-value">8,920</div><div class="sc-label">Orders This Month</div></div>
+            <div class="stat-card blue reveal"><div class="sc-top"><div class="sc-icon">💰</div><span class="sc-trend up">+9%</span></div><div class="sc-value">$284K</div><div class="sc-label">Revenue (July)</div></div>
+          </div>
+
+          <div class="admin-2col">
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Revenue & Orders — 6 Months</h3></div>
+              <div class="panel-body">
+                <div class="admin-chart">
+                  <div class="ac-col"><div class="ac-bar" style="--h:50%"><span>$210K</span></div><small>Feb</small></div>
+                  <div class="ac-col"><div class="ac-bar" style="--h:58%"><span>$235K</span></div><small>Mar</small></div>
+                  <div class="ac-col"><div class="ac-bar" style="--h:64%"><span>$252K</span></div><small>Apr</small></div>
+                  <div class="ac-col"><div class="ac-bar" style="--h:70%"><span>$268K</span></div><small>May</small></div>
+                  <div class="ac-col"><div class="ac-bar" style="--h:76%"><span>$276K</span></div><small>Jun</small></div>
+                  <div class="ac-col"><div class="ac-bar active" style="--h:82%"><span>$284K</span></div><small>Jul</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <div class="panel-head"><h3>User Distribution</h3></div>
+              <div class="panel-body">
+                <div class="donut-wrap">
+                  <div class="donut">
+                    <div class="donut-center"><strong>2,847</strong><span>users</span></div>
+                  </div>
+                  <div class="donut-legend">
+                    <div class="dl-item"><span class="dl-dot" style="background:var(--green-leaf)"></span>Members <strong>2,180</strong></div>
+                    <div class="dl-item"><span class="dl-dot" style="background:var(--sun-gold)"></span>Farmers <strong>340</strong></div>
+                    <div class="dl-item"><span class="dl-dot" style="background:var(--sky-blue)"></span>Admins <strong>12</strong></div>
+                    <div class="dl-item"><span class="dl-dot" style="background:var(--soil-brown)"></span>Trial <strong>315</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Recent Platform Activity</h3><span class="ph-action">View all</span></div>
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>Time</th><th>User</th><th>Action</th><th>Type</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>2 min ago</td><td><div class="av">EM</div></td><td>New member registration</td><td>Signup</td><td><span class="badge green">Active</span></td></tr>
+                  <tr><td>14 min ago</td><td><div class="av gold">GR</div></td><td>Farm application submitted</td><td>Farm</td><td><span class="badge gold">Pending</span></td></tr>
+                  <tr><td>1 hr ago</td><td><div class="av blue">JF</div></td><td>Large order — $189</td><td>Order</td><td><span class="badge blue">Processing</span></td></tr>
+                  <tr><td>2 hr ago</td><td><div class="av brown">TL</div></td><td>Crop data updated — Field D</td><td>Farm</td><td><span class="badge green">Updated</span></td></tr>
+                  <tr><td>3 hr ago</td><td><div class="av">AP</div></td><td>Plan upgraded to Abundance</td><td>Billing</td><td><span class="badge green">Complete</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 2: USER MANAGEMENT ===== -->
+        <section class="module" data-module="users">
+          <div class="module-head">
+            <h1>User Management 👥</h1>
+            <p>Manage members, farmers, and platform staff.</p>
+          </div>
+
+          <div class="user-filters reveal">
+            <button class="uf-btn active" data-ufilter="all">All Users <span>2,847</span></button>
+            <button class="uf-btn" data-ufilter="member">Members <span>2,180</span></button>
+            <button class="uf-btn" data-ufilter="farmer">Farmers <span>340</span></button>
+            <button class="uf-btn" data-ufilter="admin">Admins <span>12</span></button>
+            <button class="uf-btn" data-ufilter="trial">Trial <span>315</span></button>
+          </div>
+
+          <div class="panel reveal">
+            <div class="panel-head"><h3>User Directory</h3><span class="ph-action">+ Add User</span></div>
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>User</th><th>Email</th><th>Role</th><th>Joined</th><th>Plan</th><th>Status</th><th></th></tr></thead>
+                <tbody id="userTableBody">
+                  <tr data-urole="member"><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av">JF</div>Jane Farmer</div></td><td>jane@email.com</td><td>Member</td><td>Feb 2024</td><td>Harvest $59</td><td><span class="badge green">Active</span></td><td><span class="ph-action">Edit</span></td></tr>
+                  <tr data-urole="farmer"><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av gold">MK</div>Marcus Klein</div></td><td>marcus@kleinfarm.com</td><td>Farmer</td><td>Jan 2023</td><td>Partner</td><td><span class="badge green">Active</span></td><td><span class="ph-action">Edit</span></td></tr>
+                  <tr data-urole="member"><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av">AP</div>Amara Patel</div></td><td>amara@email.com</td><td>Member</td><td>Mar 2024</td><td>Abundance $99</td><td><span class="badge green">Active</span></td><td><span class="ph-action">Edit</span></td></tr>
+                  <tr data-urole="trial"><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av brown">GR</div>Greta Reyes</div></td><td>greta@email.com</td><td>Trial</td><td>Jul 2026</td><td>Trial 14d</td><td><span class="badge gold">Trial</span></td><td><span class="ph-action">Edit</span></td></tr>
+                  <tr data-urole="farmer"><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av gold">TL</div>Tomás Luna</div></td><td>tomas@lunafarm.com</td><td>Farmer</td><td>Sep 2022</td><td>Partner</td><td><span class="badge green">Active</span></td><td><span class="ph-action">Edit</span></td></tr>
+                  <tr data-urole="admin"><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av blue">SO</div>Sara Okonkwo</div></td><td>sara@Stackly.com</td><td>Admin</td><td>Jun 2021</td><td>Staff</td><td><span class="badge green">Active</span></td><td><span class="ph-action">Edit</span></td></tr>
+                  <tr data-urole="member"><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av">LR</div>Lina Reyes</div></td><td>lina@email.com</td><td>Member</td><td>Jan 2025</td><td>Harvest $59</td><td><span class="badge amber">Suspended</span></td><td><span class="ph-action">Edit</span></td></tr>
+                  <tr data-urole="trial"><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av brown">DK</div>David Kim</div></td><td>david@email.com</td><td>Trial</td><td>Jul 2026</td><td>Trial 7d</td><td><span class="badge gold">Trial</span></td><td><span class="ph-action">Edit</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 3: FARM REGISTRY ===== -->
+        <section class="module" data-module="farms">
+          <div class="module-head">
+            <h1>Farm Registry 🌾</h1>
+            <p>All partner farms in the Stackly network.</p>
+          </div>
+          <div class="cards-grid cg-4">
+            <div class="stat-card reveal"><div class="sc-top"><div class="sc-icon">🌾</div></div><div class="sc-value">340</div><div class="sc-label">Total Farms</div></div>
+            <div class="stat-card gold reveal"><div class="sc-top"><div class="sc-icon">🗺️</div></div><div class="sc-value">1,200</div><div class="sc-label">Acres Managed</div></div>
+            <div class="stat-card amber reveal"><div class="sc-top"><div class="sc-icon">⏳</div></div><div class="sc-value">8</div><div class="sc-label">Pending Approval</div></div>
+            <div class="stat-card blue reveal"><div class="sc-top"><div class="sc-icon">✅</div></div><div class="sc-value">332</div><div class="sc-label">Active Farms</div></div>
+          </div>
+          <div class="farm-grid">
+            <div class="farm-card reveal"><div class="fc-header" style="background:linear-gradient(135deg,#40916c,#2d6a4f)"><span>🌾</span><span class="badge green">Active</span></div><div class="fc-body"><h3>Klein Family Farm</h3><p class="fc-loc">📍 Valley Springs, CA</p><div class="fc-row"><span>Owner</span><strong>Marcus Klein</strong></div><div class="fc-row"><span>Acres</span><strong>180</strong></div><div class="fc-row"><span>Crops</span><strong>8 varieties</strong></div><div class="fc-row"><span>Joined</span><strong>Jan 2023</strong></div><div class="fc-row"><span>Rating</span><strong>⭐ 4.8</strong></div></div></div>
+            <div class="farm-card reveal"><div class="fc-header" style="background:linear-gradient(135deg,#f4a261,#e76f51)"><span>🌾</span><span class="badge green">Active</span></div><div class="fc-body"><h3>Luna Acres</h3><p class="fc-loc">📍 Modesto, CA</p><div class="fc-row"><span>Owner</span><strong>Tomás Luna</strong></div><div class="fc-row"><span>Acres</span><strong>320</strong></div><div class="fc-row"><span>Crops</span><strong>12 varieties</strong></div><div class="fc-row"><span>Joined</span><strong>Sep 2022</strong></div><div class="fc-row"><span>Rating</span><strong>⭐ 4.9</strong></div></div></div>
+            <div class="farm-card reveal"><div class="fc-header" style="background:linear-gradient(135deg,#48cae4,#0096c7)"><span>🌾</span><span class="badge gold">Pending</span></div><div class="fc-body"><h3>Reyes Valley Farm</h3><p class="fc-loc">📍 Fresno, CA</p><div class="fc-row"><span>Owner</span><strong>Greta Reyes</strong></div><div class="fc-row"><span>Acres</span><strong>95</strong></div><div class="fc-row"><span>Crops</span><strong>5 varieties</strong></div><div class="fc-row"><span>Applied</span><strong>Jul 2026</strong></div><div class="fc-row"><span>Status</span><strong>Awaiting docs</strong></div></div></div>
+            <div class="farm-card reveal"><div class="fc-header" style="background:linear-gradient(135deg,#774936,#a0683f)"><span>🌾</span><span class="badge green">Active</span></div><div class="fc-body"><h3>Hilltop Orchards</h3><p class="fc-loc">📍 Sonoma, CA</p><div class="fc-row"><span>Owner</span><strong>Elena Martinez</strong></div><div class="fc-row"><span>Acres</span><strong>75</strong></div><div class="fc-row"><span>Crops</span><strong>Apples, pears</strong></div><div class="fc-row"><span>Joined</span><strong>May 2020</strong></div><div class="fc-row"><span>Rating</span><strong>⭐ 4.7</strong></div></div></div>
+          </div>
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Pending Farm Approvals</h3></div>
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>Farm</th><th>Owner</th><th>Location</th><th>Acres</th><th>Applied</th><th>Action</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Reyes Valley Farm</strong></td><td>Greta Reyes</td><td>Fresno, CA</td><td>95</td><td>Jul 28</td><td><button class="btn-mini approve" onclick="showToast('Farm approved!')">Approve</button> <button class="btn-mini deny" onclick="showToast('Farm application denied.')">Deny</button></td></tr>
+                  <tr><td><strong>Green Circle Coop</strong></td><td>David Kim</td><td>Sacramento, CA</td><td>60</td><td>Jul 25</td><td><button class="btn-mini approve" onclick="showToast('Farm approved!')">Approve</button> <button class="btn-mini deny" onclick="showToast('Farm application denied.')">Deny</button></td></tr>
+                  <tr><td><strong>Sunset Acres</strong></td><td>Mia Torres</td><td>Bakersfield, CA</td><td>140</td><td>Jul 22</td><td><button class="btn-mini approve" onclick="showToast('Farm approved!')">Approve</button> <button class="btn-mini deny" onclick="showToast('Farm application denied.')">Deny</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 4: ALL ORDERS ===== -->
+        <section class="module" data-module="orders">
+          <div class="module-head">
+            <h1>All Orders 📦</h1>
+            <p>Every order across the platform.</p>
+          </div>
+          <div class="cards-grid cg-4">
+            <div class="stat-card reveal"><div class="sc-top"><div class="sc-icon">📦</div></div><div class="sc-value">8,920</div><div class="sc-label">Orders This Month</div></div>
+            <div class="stat-card gold reveal"><div class="sc-top"><div class="sc-icon">⏳</div></div><div class="sc-value">14</div><div class="sc-label">Pending Action</div></div>
+            <div class="stat-card amber reveal"><div class="sc-top"><div class="sc-icon">↩️</div></div><div class="sc-value">23</div><div class="sc-label">Returns / Issues</div></div>
+            <div class="stat-card blue reveal"><div class="sc-top"><div class="sc-icon">✅</div><span class="sc-trend up">97%</span></div><div class="sc-value">97%</div><div class="sc-label">On-time Rate</div></div>
+          </div>
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Order Log</h3><span class="ph-action">Export CSV →</span></div>
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>Order #</th><th>Member</th><th>Farmer</th><th>Items</th><th>Total</th><th>Date</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>#8920</strong></td><td>Jane Farmer</td><td>Klein Farm</td><td>12</td><td>$59</td><td>Jul 31</td><td><span class="badge gold">In Transit</span></td></tr>
+                  <tr><td><strong>#8919</strong></td><td>Amara Patel</td><td>Luna Acres</td><td>20</td><td>$99</td><td>Jul 31</td><td><span class="badge blue">Processing</span></td></tr>
+                  <tr><td><strong>#8918</strong></td><td>Lina Reyes</td><td>Hilltop Orchards</td><td>12</td><td>$59</td><td>Jul 30</td><td><span class="badge amber">Issue reported</span></td></tr>
+                  <tr><td><strong>#8917</strong></td><td>David Kim</td><td>Klein Farm</td><td>5</td><td>$29</td><td>Jul 30</td><td><span class="badge green">Delivered</span></td></tr>
+                  <tr><td><strong>#8916</strong></td><td>Mia Torres</td><td>Luna Acres</td><td>14</td><td>$67</td><td>Jul 30</td><td><span class="badge green">Delivered</span></td></tr>
+                  <tr><td><strong>#8915</strong></td><td>Sam Lee</td><td>Hilltop Orchards</td><td>12</td><td>$59</td><td>Jul 29</td><td><span class="badge green">Delivered</span></td></tr>
+                  <tr><td><strong>#8914</strong></td><td>Nora Diaz</td><td>Klein Farm</td><td>20</td><td>$99</td><td>Jul 29</td><td><span class="badge green">Delivered</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 5: REPORTS ===== -->
+        <section class="module" data-module="reports">
+          <div class="module-head">
+            <h1>Reports & Analytics 📋</h1>
+            <p>Platform-wide insights and downloadable reports.</p>
+          </div>
+          <div class="report-grid">
+            <div class="report-card reveal" onclick="showToast('Revenue report generating...')">
+              <div class="rc-icon" style="background:linear-gradient(135deg,var(--green-leaf),var(--green-forest))">💰</div>
+              <h3>Revenue Report</h3><p>Monthly and yearly revenue breakdown by plan, region, and farm.</p>
+              <span class="rc-action">Generate PDF →</span>
+            </div>
+            <div class="report-card reveal" onclick="showToast('User growth report generating...')">
+              <div class="rc-icon" style="background:linear-gradient(135deg,var(--sun-gold),var(--sun-amber))">📈</div>
+              <h3>User Growth</h3><p>Signups, retention, churn, and plan upgrade trends over time.</p>
+              <span class="rc-action">Generate PDF →</span>
+            </div>
+            <div class="report-card reveal" onclick="showToast('Farm performance report generating...')">
+              <div class="rc-icon" style="background:linear-gradient(135deg,var(--sky-blue),#0096c7)">🌾</div>
+              <h3>Farm Performance</h3><p>Yield, fulfillment rate, and revenue per partner farm.</p>
+              <span class="rc-action">Generate PDF →</span>
+            </div>
+            <div class="report-card reveal" onclick="showToast('Order analytics generating...')">
+              <div class="rc-icon" style="background:linear-gradient(135deg,var(--soil-brown),#a0683f)">📦</div>
+              <h3>Order Analytics</h3><p>Volume, average value, delivery times, and return rates.</p>
+              <span class="rc-action">Generate PDF →</span>
+            </div>
+          </div>
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Key Metrics — This Quarter</h3></div>
+            <div class="panel-body">
+              <div class="metrics-grid">
+                <div class="metric-box"><strong>$842K</strong><span>Quarter Revenue</span><div class="progress"><div class="bar" style="width:84%"></div></div></div>
+                <div class="metric-box"><strong>26,540</strong><span>Orders Fulfilled</span><div class="progress"><div class="bar gold" style="width:91%"></div></div></div>
+                <div class="metric-box"><strong>94.2%</strong><span>Retention Rate</span><div class="progress"><div class="bar" style="width:94%"></div></div></div>
+                <div class="metric-box"><strong>4.8★</strong><span>Avg Satisfaction</span><div class="progress"><div class="bar blue" style="width:96%"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 6: SETTINGS ===== -->
+        <section class="module" data-module="settings">
+          <div class="module-head">
+            <h1>Platform Settings ⚙️</h1>
+            <p>Configure Stackly system-wide options.</p>
+          </div>
+          <div class="settings-grid">
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Plan Pricing</h3></div>
+              <div class="panel-body">
+                <div class="setting-row"><div><strong>Sprout</strong><small>$29/mo · 5 items</small></div><input type="number" value="29" class="set-input"></div>
+                <div class="setting-row"><div><strong>Harvest</strong><small>$59/mo · 12 items</small></div><input type="number" value="59" class="set-input"></div>
+                <div class="setting-row"><div><strong>Abundance</strong><small>$99/mo · 20 items</small></div><input type="number" value="99" class="set-input"></div>
+                <button class="btn-fill" style="width:100%;justify-content:center;margin-top:0.5rem" onclick="window.location.href = 'dashboardError.html'">Save Pricing</button>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Delivery & Operations</h3></div>
+              <div class="panel-body">
+                <div class="toggle-row"><div><strong>Auto-assign farms</strong><small>Match orders to nearest farm automatically</small></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><strong>Require farm approval</strong><small>New farms need admin review</small></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><strong>Email notifications</strong><small>Send order updates to members</small></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><strong>Maintenance mode</strong><small>Temporarily block new signups</small></div><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Admin Team</h3></div>
+              <div class="panel-body" style="padding:0">
+                <table class="dash-table">
+                  <thead><tr><th>Name</th><th>Role</th><th>Last active</th></tr></thead>
+                  <tbody>
+                    <tr><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av blue">SO</div>Sara O.</div></td><td>Super Admin</td><td>Now</td></tr>
+                    <tr><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av">RC</div>Raj C.</div></td><td>Ops Admin</td><td>2h ago</td></tr>
+                    <tr><td><div style="display:flex;align-items:center;gap:0.5rem"><div class="av gold">EM</div>Elena M.</div></td><td>Support Admin</td><td>1d ago</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <div class="panel-head"><h3>System Health</h3></div>
+              <div class="panel-body">
+                <div class="health-row"><span>🌐 API Server</span><span class="badge green">Operational</span></div>
+                <div class="health-row"><span>🗄️ Database</span><span class="badge green">Operational</span></div>
+                <div class="health-row"><span>🚚 Delivery API</span><span class="badge green">Operational</span></div>
+                <div class="health-row"><span>📧 Email Service</span><span class="badge gold">Degraded</span></div>
+                <div class="health-row"><span>💳 Payments</span><span class="badge green">Operational</span></div>
+                <div class="health-row"><span>📊 Analytics</span><span class="badge green">Operational</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

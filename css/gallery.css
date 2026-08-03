@@ -1,0 +1,1419 @@
+/* ============================================================
+   AgroHarvest — Gallery Page Styles (unique pattern)
+   ============================================================ */
+
+/* ===== SECTION 1: HERO ===== */
+.gal-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 1.5rem 4rem;
+  background:
+    linear-gradient(135deg, rgba(231,111,81,0.7), rgba(244,162,97,0.55)),
+    url('/images/farm.webp') center/cover fixed;
+  color: #fff;
+}
+.gal-hero-inner { max-width: 700px; }
+.gal-hero h1 { font-family: var(--font-head); font-size: clamp(2.2rem, 6vw, 4rem); margin: 1rem 0; line-height: 1.1; }
+.gal-hero p { font-size: 1.15rem; opacity: 0.92; }
+.grad-amber { background: linear-gradient(135deg, #fff, #ffd166); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+.gold-eyebrow { background: rgba(255,255,255,0.22); color: #fff; backdrop-filter: blur(6px); }
+.green-eyebrow { background: var(--green-mint); color: var(--green-deep); }
+
+/* ===== SECTION 2: GALLERY ===== */
+.gallery-section { background: #fffdf5; }
+.gal-head { text-align: center; margin-bottom: 2rem; }
+
+.gal-filters {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.gal-filter {
+  padding: 0.55rem 1.3rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  background: #f0faf2;
+  color: var(--green-deep);
+  transition: all var(--transition);
+}
+.gal-filter:hover { background: var(--green-mint); }
+.gal-filter.active {
+  background: linear-gradient(135deg, var(--sun-gold), var(--sun-amber));
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(231,111,81,0.4);
+}
+
+.masonry{
+    column-count: 3;
+    row-count: 3;
+    column-gap: 1.2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.2rem;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+.masonry-item img { width: 100%; transition: transform 0.6s ease; }
+.masonry-item:hover { box-shadow: var(--shadow-lg); }
+.masonry-item:hover img { transform: scale(1.08); }
+.masonry-item.hide { display: none; }
+
+.masonry-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.5rem 1rem 0.8rem;
+  background: linear-gradient(transparent, rgba(27,67,50,0.85));
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition);
+}
+.masonry-item:hover .masonry-label { opacity: 1; transform: translateY(0); }
+
+/* ===== SECTION 3: FEATURED STORY ===== */
+.featured-story {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  padding: 4rem clamp(1.5rem, 5vw, 4rem);
+  overflow: hidden;
+}
+.fs-img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.fs-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(27,67,50,0.92), rgba(27,67,50,0.4) 70%, transparent); }
+.fs-content { position: relative; max-width: 480px; color: #fff; }
+.fs-content h2 { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0.8rem 0; }
+.fs-content p { opacity: 0.9; }
+
+/* ===== SECTION 4: STATS ===== */
+.gal-stats { background: linear-gradient(180deg, #f0faf2, #e6f5ea); }
+.gal-stats-head { text-align: center; margin-bottom: 3rem; }
+
+.gal-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.gs-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+.gs-card:hover { box-shadow: var(--shadow-md); transform: translateY(-5px); }
+.gs-card strong { display: block; font-family: var(--font-head); font-size: 2.4rem; color: var(--green-forest); }
+.gs-card span { display: block; margin: 0.3rem 0 1rem; opacity: 0.75; font-size: 0.9rem; }
+
+.gs-bar {
+  height: 6px;
+  border-radius: 6px;
+  background: var(--green-mint);
+  overflow: hidden;
+  position: relative;
+}
+.gs-bar::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: var(--w);
+  background: linear-gradient(90deg, var(--green-leaf), var(--sun-gold));
+  border-radius: 6px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease;
+}
+.gs-card.visible .gs-bar::after { transform: scaleX(1); }
+
+/* ===== SECTION 5: VIDEO ===== */
+.video-section { background: #fffdf5; }
+.video-box {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: #fff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.video-poster {
+  position: relative;
+  height: 320px;
+  border-radius: var(--radius);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.video-poster::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(27,67,50,0.25);
+}
+
+.play-btn {
+  position: relative;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  color: var(--sun-amber);
+  font-size: 1.8rem;
+  display: grid; place-items: center;
+  transition: all var(--transition);
+  animation: pulse 2s infinite;
+}
+.play-btn:hover { transform: scale(1.15); background: var(--sun-gold); color: #fff; }
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(244,162,97,0.6); }
+  70% { box-shadow: 0 0 0 20px rgba(244,162,97,0); }
+  100% { box-shadow: 0 0 0 0 rgba(244,162,97,0); }
+}
+
+.video-text h2 { font-family: var(--font-head); font-size: 1.8rem; margin: 0.6rem 0; }
+.video-text p { opacity: 0.8; margin-bottom: 1rem; }
+.video-meta { display: flex; gap: 1rem; flex-wrap: wrap; }
+.video-meta span { background: var(--green-mint); color: var(--green-deep); padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.82rem; font-weight: 600; }
+
+/* ===== SECTION 6: INSTAGRAM STRIP ===== */
+.insta-section { background: linear-gradient(180deg, #fffdf5, #f0faf2); }
+.insta-head { text-align: center; margin-bottom: 2.5rem; }
+
+.insta-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.insta-tile {
+  height: 180px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.insta-tile::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(27,67,50,0.35);
+  transition: all var(--transition);
+}
+.insta-tile span { position: relative; z-index: 1; transition: transform var(--transition); }
+.insta-tile:hover { transform: scale(1.05); box-shadow: var(--shadow-md); }
+.insta-tile:hover::before { background: rgba(244,162,97,0.5); }
+.insta-tile:hover span { transform: scale(1.3); }
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(15,30,15,0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.lightbox.open { display: flex; animation: fadeIn 0.3s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.lightbox img {
+  max-width: 85vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.lb-close, .lb-prev, .lb-next {
+  position: absolute;
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  transition: all var(--transition);
+}
+.lb-close { top: 2rem; right: 2rem; width: 48px; height: 48px; font-size: 1.4rem; }
+.lb-prev, .lb-next { top: 50%; transform: translateY(-50%); width: 56px; height: 56px; font-size: 2rem; }
+.lb-prev { left: 1.5rem; }
+.lb-next { right: 1.5rem; }
+.lb-close:hover, .lb-prev:hover, .lb-next:hover { background: var(--sun-gold); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) { .masonry { column-count: 2; } }
+@media (max-width: 768px) {
+  .video-box { grid-template-columns: 1fr; }
+  .gal-hero { background-attachment: scroll; }
+  .featured-story { background-attachment: scroll; }
+}
+@media (max-width: 560px) { .masonry { column-count: 1; } }
+
+
+/*======================================
+        BEHIND THE HARVEST
+======================================*/
+
+.harvest-process{
+
+    background:#e6f4e9;
+
+}
+
+.harvest-head{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.harvest-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.harvest-card{
+
+    background:#fff;
+
+    border:2px solid rgba(64,145,108,.18);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.harvest-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--green-forest);
+
+    box-shadow:0 20px 45px rgba(64,145,108,.18);
+
+}
+
+.harvest-img{
+
+    height:180px;
+
+    overflow:hidden;
+
+}
+
+.harvest-img img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.harvest-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.harvest-icon{
+
+    width:60px;
+
+    height:60px;
+
+    margin:-30px auto 20px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,var(--green-leaf),var(--green-forest));
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    color:#fff;
+
+    border:5px solid #fff;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.harvest-card h3{
+
+    text-align:center;
+
+    font-size:22px;
+
+    margin-bottom:14px;
+
+    color:var(--green-deep);
+
+}
+
+.harvest-card p{
+
+    text-align:center;
+
+    padding:0 24px 28px;
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+.harvest-arrow{
+
+    font-size:42px;
+
+    color:var(--green-leaf);
+
+    font-weight:bold;
+
+    animation:arrowMove 1.8s infinite;
+
+}
+
+@keyframes arrowMove{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    50%{
+
+        transform:translateX(8px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/*==========================
+        RESPONSIVE
+==========================*/
+
+@media(max-width:991px){
+
+.harvest-grid{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.harvest-arrow{
+
+    display:none;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.harvest-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.harvest-img{
+
+    height:220px;
+
+}
+
+}
+
+/*====================================
+      SEASONAL GALLERY
+====================================*/
+
+.seasonal-gallery{
+
+    background:#fffdf8;
+
+}
+
+.season-head{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.season-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+.season-card{
+
+    background:#fff;
+
+    border:2px solid rgba(64,145,108,.15);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.season-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--green-forest);
+
+    box-shadow:0 20px 45px rgba(64,145,108,.18);
+
+}
+
+.season-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.season-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.season-content{
+
+    padding:24px;
+
+}
+
+.season-badge{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    background:rgba(64,145,108,.1);
+
+    color:var(--green-forest);
+
+    font-weight:600;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+.season-content h3{
+
+    color:var(--green-deep);
+
+    margin-bottom:15px;
+
+}
+
+.season-content ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 20px;
+
+}
+
+.season-content ul li{
+
+    padding:7px 0;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.season-content a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--green-forest);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.season-content a:hover{
+
+    color:var(--sun-amber);
+
+    transform:translateX(6px);
+
+}
+
+@media(max-width:991px){
+
+.season-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:576px){
+
+.season-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/*===========================
+      SEASON COLORS
+===========================*/
+
+/* Spring */
+
+.season-card:nth-child(1){
+
+    background:#F2FFF3;
+
+    border-color:#74C365;
+
+}
+
+.season-card:nth-child(1) .season-badge{
+
+    background:#74C365;
+
+    color:#fff;
+
+}
+
+
+/* Summer */
+
+.season-card:nth-child(2){
+
+    background:#FFF8E7;
+
+    border-color:#F4B400;
+
+}
+
+.season-card:nth-child(2) .season-badge{
+
+    background:#F4B400;
+
+    color:#fff;
+
+}
+
+
+/* Autumn */
+
+.season-card:nth-child(3){
+
+    background:#FFF2E8;
+
+    border-color:#E67E22;
+
+}
+
+.season-card:nth-child(3) .season-badge{
+
+    background:#E67E22;
+
+    color:#fff;
+
+}
+
+
+/* Winter */
+
+.season-card:nth-child(4){
+
+    background:#EDF8FF;
+
+    border-color:#4AA3DF;
+
+}
+
+.season-card:nth-child(4) .season-badge{
+
+    background:#4AA3DF;
+
+    color:#fff;
+
+}
+
+/*====================================
+        FARM TIMELINE
+====================================*/
+
+.farm-timeline{
+
+    background:#d6f0dc;
+
+}
+
+.timeline-head{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.timeline-wrapper{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.timeline-line{
+
+    position:absolute;
+
+    top:45px;
+
+    left:8%;
+
+    right:8%;
+
+    height:4px;
+
+    background:linear-gradient(90deg,var(--green-leaf),var(--sun-gold));
+
+    border-radius:20px;
+
+    z-index:1;
+
+}
+
+.timeline-card{
+
+    position:relative;
+
+    background:#fff;
+
+    border:2px solid rgba(64,145,108,.15);
+
+    border-radius:22px;
+
+    padding:24px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+    z-index:2;
+
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--green-forest);
+
+    box-shadow:0 20px 45px rgba(64,145,108,.18);
+
+}
+
+.timeline-dot{
+
+    width:70px;
+
+    height:70px;
+
+    margin:-58px auto 20px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,var(--green-leaf),var(--green-forest));
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:28px;
+
+    border:5px solid #fff;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.timeline-card img{
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    margin-bottom:18px;
+
+    transition:.5s;
+
+}
+
+.timeline-card:hover img{
+
+    transform:scale(1.06);
+
+}
+
+.timeline-card h3{
+
+    color:var(--green-deep);
+
+    margin-bottom:6px;
+
+}
+
+.timeline-card span{
+
+    display:inline-block;
+
+    margin-bottom:14px;
+
+    padding:6px 14px;
+
+    background:rgba(64,145,108,.1);
+
+    color:var(--green-forest);
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.timeline-card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+/*======================*/
+
+@media(max-width:991px){
+
+.timeline-wrapper{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.timeline-line{
+
+    display:none;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.timeline-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/*====================================
+      360° VIRTUAL TOUR
+====================================*/
+
+.virtual-tour{
+
+    background:#f8fcf8;
+
+}
+
+.tour-head{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.tour-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1.6fr 1fr;
+
+    gap:35px;
+
+    align-items:center;
+
+}
+
+.tour-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    border:2px solid rgba(64,145,108,.18);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.tour-image img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.tour-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.tour-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(to top,
+    rgba(0,0,0,.55),
+    transparent 55%);
+
+}
+
+.tour-badge{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    background:#fff;
+
+    color:var(--green-deep);
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    z-index:2;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+}
+
+.tour-play{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:35px;
+
+    transform:translateX(-50%);
+
+    padding:16px 34px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,var(--green-leaf),var(--green-forest));
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    z-index:2;
+
+    transition:.35s;
+
+}
+
+.tour-play:hover{
+
+    transform:translateX(-50%) scale(1.06);
+
+    box-shadow:0 18px 35px rgba(64,145,108,.35);
+
+}
+
+.tour-features{
+
+    display:grid;
+
+    gap:22px;
+
+}
+
+.tour-feature{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    background:#fff;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    border:2px solid rgba(64,145,108,.15);
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.tour-feature:hover{
+
+    transform:translateX(10px);
+
+    border-color:var(--green-forest);
+
+}
+
+.tour-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,var(--green-leaf),var(--green-forest));
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.tour-feature h4{
+
+    color:var(--green-deep);
+
+    margin-bottom:8px;
+
+}
+
+.tour-feature p{
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+
+@media(max-width:991px){
+
+.tour-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.tour-image img{
+
+    height:420px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.tour-image img{
+
+    height:300px;
+
+}
+
+.tour-play{
+
+    width:85%;
+
+}
+
+}
+
+/*==================================
+     FARMER PORTRAIT COLLECTION
+===================================*/
+
+.farmer-collection{
+
+    background:#f9fdf8;
+
+}
+
+.farmer-head{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.farmer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+}
+
+.farmer-card{
+
+    background:#fff;
+
+    border:2px solid rgba(64,145,108,.15);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+}
+
+.farmer-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--green-forest);
+
+    box-shadow:0 20px 45px rgba(64,145,108,.18);
+
+}
+
+.farmer-image{
+
+    overflow:hidden;
+
+    height:280px;
+
+}
+
+.farmer-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.farmer-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.farmer-content{
+
+    padding:24px;
+
+}
+
+.role{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    background:rgba(64,145,108,.1);
+
+    color:var(--green-forest);
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:14px;
+
+}
+
+.farmer-content h3{
+
+    color:var(--green-deep);
+
+    margin-bottom:10px;
+
+}
+
+.farmer-content p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:18px;
+
+    min-height:70px;
+
+}
+
+.farmer-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+    padding:12px;
+
+    background:#f6faf7;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    color:var(--green-forest);
+
+}
+
+.farmer-content a{
+
+    font-weight:600;
+
+    color:var(--green-forest);
+
+    transition:.3s;
+
+}
+
+.farmer-content a:hover{
+
+    color:var(--sun-amber);
+
+    padding-left:8px;
+
+}
+
+@media(max-width:991px){
+
+.farmer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:576px){
+
+.farmer-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+/* ===== UNIQUE BACKGROUND COLORS FOR ALL CARDS ===== */
+
+/* Gallery Stats */
+.gs-card:nth-child(1){background:#d5f5e3;}
+.gs-card:nth-child(2){background:#d6eaf8;}
+.gs-card:nth-child(3){background:#fdebd0;}
+.gs-card:nth-child(4){background:#f9e0e7;}
+
+/* Harvest */
+.harvest-card:nth-child(1){background:#d4edda;}
+.harvest-card:nth-child(3){background:#d6eaf8;}
+.harvest-card:nth-child(5){background:#fdebd3;}
+.harvest-card:nth-child(7){background:#f8d7da;}
+
+/* Seasons */
+.season-card:nth-child(1){background:#d5f5e3;}
+.season-card:nth-child(2){background:#fcf3cf;}
+.season-card:nth-child(3){background:#fadbd8;}
+.season-card:nth-child(4){background:#d6eaf8;}
+
+/* Timeline */
+.timeline-card:nth-child(2){background:#d4efdf;}
+.timeline-card:nth-child(3){background:#d6eaf8;}
+.timeline-card:nth-child(4){background:#fdebd0;}
+.timeline-card:nth-child(5){background:#f8d7da;}
+
+/* Tour Features */
+.tour-feature:nth-child(1){background:#d4efdf;}
+.tour-feature:nth-child(2){background:#d6eaf8;}
+.tour-feature:nth-child(3){background:#fdebd0;}
+.tour-feature:nth-child(4){background:#f9e0e7;}
+
+/* Farmer Cards */
+.farmer-card:nth-child(1){background:#d5f5e3;}
+.farmer-card:nth-child(2){background:#d6eaf8;}
+.farmer-card:nth-child(3){background:#fdebd0;}
+.farmer-card:nth-child(4){background:#f8d7da;}
+
+/* Video Section */
+.video-box{
+    background:#e2f4e8;
+}
+
+/* Featured Story */
+.fs-content{
+    background:rgba(23,55,38,.45);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:24px;
+}

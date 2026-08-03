@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <!-- ===== LOGIN PAGE (6 sections, unique full-screen split design) ===== -->
+
+  <!-- Close button (returns to home) -->
+  <a href="index.html" class="login-close" aria-label="Close and go home">✕</a>
+
+  <!-- ===== SECTION 1: LEFT VISUAL PANEL ===== -->
+  <div class="login-left">
+    <div class="ll-overlay"></div>
+    <div class="ll-content">
+      <a href="index.html" class="ll-brand"><span class="leaf-icon">🌿</span> Stackly</a>
+      <h1>Welcome Back to the <span class="grad-amber">Field</span></h1>
+      <p>Sign in to manage your harvest plan, track deliveries, and connect with your farm.</p>
+      <ul class="ll-perks">
+        <li><span>✓</span> Manage your weekly harvest box</li>
+        <li><span>✓</span> Track deliveries in real time</li>
+        <li><span>✓</span> Exclusive member farm events</li>
+        <li><span>✓</span> Seasonal recipes & growing tips</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== RIGHT: FORM AREA ===== -->
+  <div class="login-right">
+
+    <!-- ===== SECTION 2: ROLE SELECTOR ===== -->
+    <div class="role-section">
+      <span class="eyebrow gold-eyebrow">👥 Choose Your Role</span>
+      <p class="role-hint">Select how you'd like to sign in</p>
+      <div class="role-grid">
+        <button class="role-card active" data-role="member">
+          <div class="role-icon">🧑‍🌾</div>
+          <strong>Member</strong><span>Harvest plan subscriber</span>
+        </button>
+        <button class="role-card" data-role="farmer">
+          <div class="role-icon">🚜</div>
+          <strong>Farmer</strong><span>Partner farm access</span>
+        </button>
+        <button class="role-card" data-role="admin">
+          <div class="role-icon">📊</div>
+          <strong>Admin</strong><span>Operations dashboard</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== SECTION 3: LOGIN FORM ===== -->
+    <div class="login-form-section">
+      <h2>Sign In <span id="roleLabel">as Member</span></h2>
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="lemail">Email Address</label>
+          <input type="email" id="lemail" placeholder="you@Stackly.com" required>
+        </div>
+        <div class="field">
+          <label for="lpass">Password</label>
+          <div class="pass-wrap">
+            <input type="password" id="lpass" placeholder="••••••••" required>
+            <button type="button" class="pass-toggle" id="pwdToggle">
+    <i class="fa-regular fa-eye"></i>
+</button>
+          </div>
+        </div>
+        <div class="form-options">
+          <label class="remember"><input type="checkbox"> Remember me</label>
+          <a href="#" class="forgot">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn-signin">Sign In →</button>
+        <p class="login-error" id="loginError">Please enter both email and password.</p>
+        <p class="login-success" id="loginSuccess">✓ Welcome back! Redirecting to your dashboard...</p>
+      </form>
+    </div>
+
+    <!-- ===== SECTION 4: DIVIDER ===== -->
+    <div class="divider"><span>or continue with</span></div>
+
+    <!-- ===== SECTION 5: SOCIAL ===== -->
+    <div class="social-section">
+      <button class="social-btn"><span>G</span> Google</button>
+      <button class="social-btn"><span></span> Apple</button>
+      <button class="social-btn"><span>f</span> Facebook</button>
+    </div>
+
+    <!-- ===== SECTION 6: SIGNUP LINK ===== -->
+    <div class="signup-section">
+      <p>New to Stackly? <a href="signup.html" class="signup-link">Create an account</a></p>
+      <p class="back-home"><a href="index.html">← Back to home</a></p>
+    </div>
+
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

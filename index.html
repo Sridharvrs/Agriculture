@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+    <img src="/images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
+</a>
+    <div class="nav-links">
+      <a href="index.html" data-nav>Home</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="services.html" data-nav>Services</a>
+      <a href="gallery.html" data-nav>Gallery</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn-login">Login</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <h3>Menu</h3>
+      <button class="drawer-close" aria-label="Close">✕</button>
+    </div>
+    <nav>
+      <a href="index.html" data-nav>Home</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="services.html" data-nav>Services</a>
+      <a href="gallery.html" data-nav>Gallery</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </nav>
+    <div class="drawer-login-wrap">
+      <a href="login.html" class="drawer-login">Login</a>
+    </div>
+  </aside>
+
+  <!-- ===== SECTION 1: HERO ===== -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🌱 Sustainable Agriculture Since 1995</span>
+      <h1>Growing a <span class="grad-text">Greener</span> Future Together</h1>
+      <p>From rich soil to golden harvests — we blend tradition with technology to feed the world responsibly and beautifully.</p>
+      <div class="hero-btns">
+        <a href="error.html" class="btn-primary">Explore Services</a>
+        <a href="error.html" class="btn-ghost">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>28+</strong><span>Years Growing</span></div>
+        <div class="stat"><strong>1,200</strong><span>Acres Farmed</span></div>
+        <div class="stat"><strong>50K</strong><span>Families Fed</span></div>
+        <div class="stat"><strong>100%</strong><span>Organic</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll">↓ Scroll</div>
+  </header>
+
+  <!-- ===== SECTION 2: WELCOME / INTRO ===== -->
+  <section class="section welcome">
+    <div class="container welcome-grid">
+      <div class="welcome-img reveal">
+        <img src="images/home1.webp" alt="Golden wheat field countryside">
+        <div class="welcome-img-badge">
+          <strong>28 yrs</strong><span>of harvest heritage</span>
+        </div>
+      </div>
+      <div class="welcome-text reveal">
+        <span class="eyebrow green-eyebrow">🌾 Welcome to Stackly</span>
+        <h2 class="section-title">Where Roots Run Deep & Innovation Grows Tall</h2>
+        <p class="section-sub">We are a family-rooted agricultural collective dedicated to sustainable farming, smart technology, and nourishing communities with pure, organic produce.</p>
+        <ul class="welcome-list">
+          <li><span class="check">✓</span> Eco-friendly farming practices</li>
+          <li><span class="check">✓</span> Modern precision agriculture tools</li>
+          <li><span class="check">✓</span> Farm-to-table fresh delivery</li>
+          <li><span class="check">✓</span> Community education programs</li>
+        </ul>
+        <a href="error.html" class="btn-primary">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: FEATURES GRID ===== -->
+  <section class="section features">
+    <div class="container">
+      <div class="features-head reveal">
+        <span class="eyebrow gold-eyebrow">⚙️ Why Choose Us</span>
+        <h2 class="section-title">Smart Farming, Better Harvest</h2>
+        <p class="section-sub">Six pillars that make our farms productive, sustainable, and future-ready.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal" style="--c:var(--green-leaf)">
+          <div class="feature-icon">🌾</div>
+          <h3>Crop Diversity</h3>
+          <p>Over 40 crop varieties grown in rotation to keep soil rich and yields high.</p>
+        </div>
+        <div class="feature-card reveal" style="--c:var(--sun-gold)">
+          <div class="feature-icon">💧</div>
+          <h3>Smart Irrigation</h3>
+          <p>Sensor-driven watering saves 40% water while boosting crop health.</p>
+        </div>
+        <div class="feature-card reveal" style="--c:var(--sky-blue)">
+          <div class="feature-icon">🐝</div>
+          <h3>Bee Friendly</h3>
+          <p>Pollinator habitats woven through every field for natural biodiversity.</p>
+        </div>
+        <div class="feature-card reveal" style="--c:var(--sun-amber)">
+          <div class="feature-icon">🚜</div>
+          <h3>Precision Tech</h3>
+          <p>GPS-guided tractors and drone monitoring for exact, efficient farming.</p>
+        </div>
+        <div class="feature-card reveal" style="--c:var(--green-forest)">
+          <div class="feature-icon">🌱</div>
+          <h3>Organic First</h3>
+          <p>Zero synthetic pesticides — only natural compost and biological controls.</p>
+        </div>
+        <div class="feature-card reveal" style="--c:var(--soil-brown)">
+          <div class="feature-icon">📦</div>
+          <h3>Farm to Table</h3>
+          <p>Direct delivery from our fields to your kitchen within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: STATS BANNER ===== -->
+  <section class="stats-banner">
+    <div class="stats-overlay"></div>
+    <div class="container stats-row">
+      <div class="stat-big reveal">
+        <strong>15K+</strong><span>Tons Harvested</span>
+      </div>
+      <div class="stat-big reveal">
+        <strong>340</strong><span>Farm Partners</span>
+      </div>
+      <div class="stat-big reveal">
+        <strong>92%</strong><span>Water Saved</span>
+      </div>
+      <div class="stat-big reveal">
+        <strong>40+</strong><span>Crop Types</span>
+      </div>
+    </div>
+  </section>
+
+<!-- ===================== FARMING PROCESS ===================== -->
+<section class="section farming-process">
+    <div class="container">
+
+        <div class="process-heading reveal">
+            <span class="eyebrow green-eyebrow">🌱 Our Farming Process</span>
+
+            <h2 class="section-title">
+                From Tiny Seed to Your Dining Table
+            </h2>
+
+            <p class="section-sub">
+                Every harvest follows a carefully planned journey using sustainable
+                farming techniques, smart technology, and strict quality standards
+                to ensure fresh, healthy produce reaches your family.
+            </p>
+        </div>
+
+        <div class="process-grid">
+
+            <div class="process-card reveal">
+                <div class="step-number">01</div>
+
+                <div class="process-icon">
+                    🌾
+                </div>
+
+                <h3>Seed Selection</h3>
+
+                <p>
+                    We carefully choose premium-quality seeds with high germination
+                    rates to ensure healthier crops and better yields.
+                </p>
+            </div>
+
+            <div class="process-card reveal">
+                <div class="step-number">02</div>
+
+                <div class="process-icon">
+                    🚜
+                </div>
+
+                <h3>Soil Preparation</h3>
+
+                <p>
+                    Organic compost and natural nutrients enrich the soil while
+                    preserving biodiversity and improving long-term fertility.
+                </p>
+            </div>
+
+            <div class="process-card reveal">
+                <div class="step-number">03</div>
+
+                <div class="process-icon">
+                    💧
+                </div>
+
+                <h3>Smart Irrigation</h3>
+
+                <p>
+                    Automated irrigation systems deliver the right amount of water,
+                    reducing waste and promoting healthy plant growth.
+                </p>
+            </div>
+
+            <div class="process-card reveal">
+                <div class="step-number">04</div>
+
+                <div class="process-icon">
+                    🌱
+                </div>
+
+                <h3>Healthy Growth</h3>
+
+                <p>
+                    Crops are monitored daily using sustainable farming practices
+                    without harmful chemical pesticides.
+                </p>
+            </div>
+
+            <div class="process-card reveal">
+                <div class="step-number">05</div>
+
+                <div class="process-icon">
+                    🌽
+                </div>
+
+                <h3>Harvest</h3>
+
+                <p>
+                    Our experienced farmers harvest crops at the perfect maturity
+                    stage for maximum freshness and nutrition.
+                </p>
+            </div>
+
+            <div class="process-card reveal">
+                <div class="step-number">06</div>
+
+                <div class="process-icon">
+                    📦
+                </div>
+
+                <h3>Quality & Delivery</h3>
+
+                <p>
+                    Every product is inspected, carefully packed, and delivered
+                    directly from our farm to your doorstep.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+  <!-- ===== SECTION 5: PRODUCE SHOWCASE ===== -->
+  <section class="section produce">
+    <div class="container">
+      <div class="produce-head reveal">
+        <span class="eyebrow leaf-eyebrow">🥕 Fresh From Our Fields</span>
+        <h2 class="section-title">Season's Best Produce</h2>
+        <p class="section-sub">Hand-picked, organically grown, and delivered with care.</p>
+      </div>
+      <div class="produce-grid">
+        <div class="produce-card reveal">
+          <img src="images/home2.webp" alt="Fresh organic vegetables">
+          <div class="produce-info">
+            <h3>Garden Vegetables</h3><span class="tag">In Season</span>
+          </div>
+        </div>
+        <div class="produce-card reveal">
+          <img src="images/apple.webp" alt="Red apples orchard">
+          <div class="produce-info">
+            <h3>Orchard Fruits</h3><span class="tag gold">Peak Harvest</span>
+          </div>
+        </div>
+        <div class="produce-card reveal">
+          <img src="images/home1.webp" alt="Golden wheat field">
+          <div class="produce-info">
+            <h3>Golden Grains</h3><span class="tag blue">Premium</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ===================== WHY ORGANIC MATTERS ===================== -->
+<section class="section organic-section">
+    <div class="container organic-grid">
+
+        
+
+        <!-- Right Content -->
+        <div class="organic-content reveal">
+
+            <span class="eyebrow green-eyebrow">
+                🌿 Why Organic Matters
+            </span>
+
+            <h2 class="section-title">
+                Healthy Farming for a Healthier Future
+            </h2>
+
+            <p class="section-sub">
+                Organic farming isn't just about growing crops—it's about protecting
+                nature, enriching the soil, conserving water, and delivering
+                nutritious food without harmful chemicals.
+            </p>
+
+            <div class="organic-features">
+
+                <div class="organic-card">
+                    <div class="organic-icon">🌱</div>
+
+                    <div>
+                        <h3>No Harmful Chemicals</h3>
+
+                        <p>
+                            We never use synthetic pesticides or chemical fertilizers,
+                            ensuring safer and healthier produce.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="organic-card">
+                    <div class="organic-icon">💚</div>
+
+                    <div>
+                        <h3>Better Nutrition</h3>
+
+                        <p>
+                            Naturally grown crops retain more vitamins,
+                            minerals, and authentic flavor.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="organic-card">
+                    <div class="organic-icon">🌎</div>
+
+                    <div>
+                        <h3>Protects the Environment</h3>
+
+                        <p>
+                            Sustainable farming reduces pollution while
+                            preserving biodiversity and wildlife.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <div class="organic-card">
+                    <div class="organic-icon">💧</div>
+
+                    <div>
+                        <h3>Conserves Water</h3>
+
+                        <p>
+                            Smart irrigation and organic soil retain moisture,
+                            reducing water consumption significantly.
+                        </p>
+                    </div>
+                </div> -->
+
+            </div>
+
+        </div>
+
+        <!-- Left Image -->
+        <div class="organic-image reveal">
+            <img src="images/vegetables.webp" alt="Organic Farming">
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================
+      OUR CROPS
+========================== -->
+<section class="section crops-section">
+
+    <div class="container">
+
+        <div class="crops-heading reveal">
+
+            <span class="eyebrow green-eyebrow">
+                🌾 Our Crops
+            </span>
+
+            <h2 class="section-title">
+                Cultivating Nature's Finest Harvests
+            </h2>
+
+            <p class="section-sub">
+                From nutritious grains to fresh vegetables and seasonal fruits,
+                every crop is cultivated with sustainable farming methods,
+                ensuring exceptional quality, freshness, and nutrition.
+            </p>
+
+        </div>
+
+
+        <div class="crops-layout">
+
+            <!-- LEFT -->
+
+            <div class="crops-image reveal">
+
+                <img src="images/vegs.webp"
+                    alt="Crop Field">
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="crop-cards">
+
+                <div class="crop-card reveal">
+
+                    <div class="crop-icon">🌾</div>
+
+                    <div class="crop-content">
+
+                        <h3>Organic Grains</h3>
+
+                        <p>
+                            Premium wheat, rice, maize and millet cultivated
+                            with natural farming practices for higher nutrition.
+                        </p>
+
+                        <span>18+ Varieties</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="crop-card reveal">
+
+                    <div class="crop-icon">🥕</div>
+
+                    <div class="crop-content">
+
+                        <h3>Fresh Vegetables</h3>
+
+                        <p>
+                            Farm-fresh vegetables harvested daily and delivered
+                            while maintaining maximum freshness and flavor.
+                        </p>
+
+                        <span>25+ Varieties</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="crop-card reveal">
+
+                    <div class="crop-icon">🍎</div>
+
+                    <div class="crop-content">
+
+                        <h3>Seasonal Fruits</h3>
+
+                        <p>
+                            Naturally ripened fruits grown without harmful
+                            chemicals, rich in vitamins and antioxidants.
+                        </p>
+
+                        <span>15+ Varieties</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="crop-card reveal">
+
+                    <div class="crop-icon">🌻</div>
+
+                    <div class="crop-content">
+
+                        <h3>Oil Seeds & Pulses</h3>
+
+                        <p>
+                            Protein-rich pulses and premium oil seeds grown
+                            using eco-friendly cultivation methods.
+                        </p>
+
+                        <span>12+ Varieties</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=====================================================
+                MEET OUR FARMERS
+======================================================-->
+
+<section class="section farmers-section">
+
+    <div class="container">
+
+        <div class="farmers-heading reveal">
+
+            <span class="eyebrow green-eyebrow">
+                👨‍🌾 Meet Our Farmers
+            </span>
+
+            <h2 class="section-title">
+                The Hands Behind Every Healthy Harvest
+            </h2>
+
+            <p class="section-sub">
+                Behind every crop is a passionate team dedicated to sustainable
+                farming, innovation, and producing healthy food for future
+                generations.
+            </p>
+
+        </div>
+
+
+        <!-- Featured Farmer -->
+
+        <div class="featured-farmer">
+
+            <div class="farmer-image reveal">
+
+                <img src="images/farmer.webp">
+
+            </div>
+
+
+            <div class="farmer-info reveal">
+
+                <span class="role">
+                    Founder & Chief Farmer
+                </span>
+
+                <h3>Daniel Carter</h3>
+
+                <p>
+                    With over 28 years of agricultural experience, Daniel leads
+                    our mission to combine traditional farming knowledge with
+                    modern technology while protecting nature for future
+                    generations.
+                </p>
+
+                <div class="farmer-stats">
+
+                    <div class="info-box">
+
+                        <h4>28+</h4>
+
+                        <span>Years Experience</span>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h4>1200</h4>
+
+                        <span>Acres Managed</span>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h4>100%</h4>
+
+                        <span>Organic Farming</span>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h4>40+</h4>
+
+                        <span>Crop Types</span>
+
+                    </div>
+
+                </div>
+
+                <blockquote>
+
+                    "Healthy soil creates healthy food. Every harvest begins
+                    with respecting nature."
+
+                </blockquote>
+
+            </div>
+
+        </div>
+
+
+        <!-- Team -->
+
+        <div class="farmers-grid">
+
+            <div class="farmer-card reveal">
+
+                <img src="images/farmer1.webp">
+
+                <h3>Emily Brown</h3>
+
+                <span>Crop Specialist</span>
+
+            </div>
+
+            <div class="farmer-card reveal">
+
+                <img src="images/farmer2.webp">
+
+                <h3>Michael Lee</h3>
+
+                <span>Irrigation Manager</span>
+
+            </div>
+
+            <div class="farmer-card reveal">
+
+                <img src="images/farmer3.webp">
+
+                <h3>Sophia Wilson</h3>
+
+                <span>Organic Expert</span>
+
+            </div>
+
+            <div class="farmer-card reveal">
+
+                <img src="images/farmer4.webp">
+
+                <h3>David Thomas</h3>
+
+                <span>Harvest Supervisor</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================================
+            SMART FARMING TECHNOLOGY
+============================================ -->
+<section class="section smart-tech">
+
+    <div class="container">
+
+        <div class="tech-heading reveal">
+
+            <span class="eyebrow green-eyebrow">
+                🚜 Smart Farming Technology
+            </span>
+
+            <h2 class="section-title">
+                Modern Technology Meets Sustainable Agriculture
+            </h2>
+
+            <p class="section-sub">
+                We combine artificial intelligence, IoT devices, drones, GPS,
+                and smart irrigation systems to improve crop quality while
+                conserving natural resources for future generations.
+            </p>
+
+        </div>
+
+        <div class="tech-layout">
+
+            <!-- LEFT SIDE -->
+
+            <div class="tech-left">
+
+                <div class="featured-tech reveal">
+
+                    <div class="feature-top">
+
+                        <div class="feature-icon">
+                            🚜
+                        </div>
+
+                        <div>
+
+                            <span class="feature-label">
+                                Precision Agriculture
+                            </span>
+
+                            <h3>
+                                Intelligent Farming Powered by Innovation
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Every acre of farmland is monitored using smart
+                        technologies that help increase productivity,
+                        reduce waste, improve soil health, and maximize
+                        crop quality throughout every growing season.
+                    </p>
+
+                    <div class="feature-list">
+
+                        <div class="list-item">
+
+                            <span>✔</span>
+
+                            AI Crop Detection
+
+                        </div>
+
+                        <div class="list-item">
+
+                            <span>✔</span>
+
+                            GPS Guided Machinery
+
+                        </div>
+
+                        <div class="list-item">
+
+                            <span>✔</span>
+
+                            Drone Field Mapping
+
+                        </div>
+
+                        <div class="list-item">
+
+                            <span>✔</span>
+
+                            Satellite Analytics
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+
+            <div class="tech-right">
+
+                <div class="tech-card reveal">
+
+                    <div class="tech-icon">
+                        🚁
+                    </div>
+
+                    <h3>Drone Monitoring</h3>
+
+                    <p>
+                        Real-time aerial inspection detects diseases,
+                        irrigation issues and crop growth patterns.
+                    </p>
+
+                </div>
+
+                <div class="tech-card reveal">
+
+                    <div class="tech-icon">
+                        💧
+                    </div>
+
+                    <h3>Smart Irrigation</h3>
+
+                    <p>
+                        Automatic watering systems deliver the right
+                        amount of water at the perfect time.
+                    </p>
+
+                </div>
+
+                <div class="tech-card reveal">
+
+                    <div class="tech-icon">
+                        🌤
+                    </div>
+
+                    <h3>Weather Intelligence</h3>
+
+                    <p>
+                        AI-powered weather prediction helps farmers
+                        prepare for seasonal climate changes.
+                    </p>
+
+                </div>
+
+                <div class="tech-card reveal">
+
+                    <div class="tech-icon">
+                        📡
+                    </div>
+
+                    <h3>Soil Sensors</h3>
+
+                    <p>
+                        Continuous monitoring of soil moisture,
+                        nutrients and temperature for healthier crops.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom Dashboard -->
+
+        <div class="tech-dashboard">
+
+            <div class="dashboard-card reveal">
+
+                <h3>98%</h3>
+
+                <span>Monitoring Accuracy</span>
+
+            </div>
+
+            <div class="dashboard-card reveal">
+
+                <h3>40%</h3>
+
+                <span>Water Saved</span>
+
+            </div>
+
+            <div class="dashboard-card reveal">
+
+                <h3>24/7</h3>
+
+                <span>Field Monitoring</span>
+
+            </div>
+
+            <div class="dashboard-card reveal">
+
+                <h3>100+</h3>
+
+                <span>IoT Devices</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- ===== SECTION 6: CTA ===== -->
+  <section class="section cta-section">
+    <div class="container cta-box reveal">
+      <div class="cta-text">
+        <h2>Ready to Taste the Difference?</h2>
+        <p>Join thousands of families enjoying fresh, organic produce delivered straight from our farms.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="error.html" class="btn-primary">Get Started</a>
+        <a href="error.html" class="btn-ghost">Member Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" data-footer></footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

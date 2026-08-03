@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Member Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/member.css">
+</head>
+<body>
+
+  <div class="dash">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <a href="member.html" class="nav-brand">
+    <img src="/images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
+</a>
+      <div class="sidebar-role">Member Panel</div>
+      <nav class="sidebar-nav">
+        <div class="nav-item active" data-module="overview"><span class="ni-icon">📊</span><span class="ni-label">Overview</span></div>
+        <div class="nav-item" data-module="box"><span class="ni-icon">📦</span><span class="ni-label">My Harvest Box</span><span class="ni-badge">New</span></div>
+        <div class="nav-item" data-module="orders"><span class="ni-icon">🧾</span><span class="ni-label">Orders</span></div>
+        <div class="nav-item" data-module="deliveries"><span class="ni-icon">🚚</span><span class="ni-label">Deliveries</span></div>
+        <div class="nav-item" data-module="recipes"><span class="ni-icon">🍳</span><span class="ni-label">Recipes</span></div>
+        <div class="nav-item" data-module="profile"><span class="ni-icon">👤</span><span class="ni-label">Profile</span></div>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="btn-logout">⏻ Logout</button>
+      </div>
+    </aside>
+
+    <!-- overlay for mobile -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- ===== MAIN ===== -->
+    <div class="dash-main">
+
+      <!-- TOPBAR (sticky) -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+          <span class="topbar-title">Overview</span>
+        </div>
+        <div class="topbar-right">
+          <div class="topbar-search"><span class="ts-icon">🔍</span><input type="text" placeholder="Search..."></div>
+          <button class="topbar-icon-btn">🔔<span class="dot"></span></button>
+          <div class="topbar-user">
+            <div class="tu-avatar">JF</div>
+            <div class="tu-info"><strong>Jane</strong><span>Member</span></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT -->
+      <main class="dash-content">
+
+        <!-- ===== MODULE 1: OVERVIEW ===== -->
+        <section class="module active" data-module="overview">
+          <div class="module-head">
+            <h1>Welcome back, <span class="profileName">Guest</span>! 🌱</h1>
+            <p>Here's what's happening with your harvest this week.</p>
+          </div>
+
+          <div class="cards-grid cg-4">
+            <div class="stat-card reveal">
+              <div class="sc-top"><div class="sc-icon">📦</div><span class="sc-trend up">Active</span></div>
+              <div class="sc-value">Harvest</div><div class="sc-label">Current Plan</div>
+            </div>
+            <div class="stat-card gold reveal">
+              <div class="sc-top"><div class="sc-icon">🚚</div><span class="sc-trend up">On time</span></div>
+              <div class="sc-value">2 days</div><div class="sc-label">Next Delivery</div>
+            </div>
+            <div class="stat-card amber reveal">
+              <div class="sc-top"><div class="sc-icon">🥕</div><span class="sc-trend up">+3</span></div>
+              <div class="sc-value">12 items</div><div class="sc-label">In This Week's Box</div>
+            </div>
+            <div class="stat-card blue reveal">
+              <div class="sc-top"><div class="sc-icon">⭐</div><span class="sc-trend up">4.9</span></div>
+              <div class="sc-value">1,250</div><div class="sc-label">Reward Points</div>
+            </div>
+          </div>
+
+          <div class="ov-2col">
+            <div class="panel reveal">
+              <div class="panel-head"><h3>This Week's Box Preview</h3><span class="ph-action">Customize →</span></div>
+              <div class="panel-body">
+                <div class="box-preview">
+                  <div class="bp-item"><span>🍅</span><div><strong>Heirloom Tomatoes</strong><small>2 lb · farm fresh</small></div></div>
+                  <div class="bp-item"><span>🥬</span><div><strong>Kale Bunch</strong><small>1 bunch · organic</small></div></div>
+                  <div class="bp-item"><span>🥕</span><div><strong>Rainbow Carrots</strong><small>1.5 lb · just pulled</small></div></div>
+                  <div class="bp-item"><span>🍎</span><div><strong>Crisp Apples</strong><small>6 ct · orchard picked</small></div></div>
+                  <div class="bp-item"><span>🥚</span><div><strong>Pasture Eggs</strong><small>1 dozen · free range</small></div></div>
+                  <div class="bp-item"><span>🧀</span><div><strong>Farm Cheddar</strong><small>8 oz · aged 3 mo</small></div></div>
+                </div>
+                <button class="btn-fill gold" style="width:100%;justify-content:center;margin-top:1rem" onclick="window.location.href = 'dashboardError.html'">Confirm This Box</button>
+              </div>
+            </div>
+
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Delivery Timeline</h3></div>
+              <div class="panel-body">
+                <div class="timeline-dash">
+                  <div class="td-item done"><div class="td-dot"></div><div><strong>Order Placed</strong><small>Jul 28, 9:14am</small></div></div>
+                  <div class="td-item done"><div class="td-dot"></div><div><strong>Packing at Farm</strong><small>Jul 29, 6:00am</small></div></div>
+                  <div class="td-item active"><div class="td-dot"></div><div><strong>Out for Delivery</strong><small>Expected Jul 31, 8am</small></div></div>
+                  <div class="td-item"><div class="td-dot"></div><div><strong>Delivered</strong><small>Pending</small></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Recent Activity</h3></div>
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>Date</th><th>Activity</th><th>Details</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>Jul 28</td><td>Box customized</td><td>Swapped spinach for kale</td><td><span class="badge green">Saved</span></td></tr>
+                  <tr><td>Jul 25</td><td>Delivery received</td><td>Box #142 · 12 items</td><td><span class="badge blue">Delivered</span></td></tr>
+                  <tr><td>Jul 22</td><td>Recipe saved</td><td>"Roasted Root Veg Medley"</td><td><span class="badge gold">Saved</span></td></tr>
+                  <tr><td>Jul 20</td><td>Reward earned</td><td>+50 pts · farm tour check-in</td><td><span class="badge green">Earned</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 2: MY HARVEST BOX ===== -->
+        <section class="module" data-module="box">
+          <div class="module-head">
+            <h1>My Harvest Box 📦</h1>
+            <p>Customize your weekly selection. Changes save automatically.</p>
+          </div>
+
+          <div class="box-plan-banner reveal">
+            <div><strong>Harvest Plan</strong><span>$59/mo · 12 items weekly · Free delivery</span></div>
+            <button class="btn-fill" onclick="window.location.href = 'dashboardError.html'">Manage Plan</button>
+          </div>
+
+          <div class="customize-grid">
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Vegetables</h3><span class="ph-action">5 selected</span></div>
+              <div class="panel-body">
+                <div class="pick-list">
+                  <label class="pick-item checked"><input type="checkbox" checked><span>🍅</span><div><strong>Heirloom Tomatoes</strong><small>2 lb</small></div><span class="pick-qty">2 lb</span></label>
+                  <label class="pick-item checked"><input type="checkbox" checked><span>🥬</span><div><strong>Kale Bunch</strong><small>1 bunch</small></div><span class="pick-qty">1 bu</span></label>
+                  <label class="pick-item checked"><input type="checkbox" checked><span>🥕</span><div><strong>Rainbow Carrots</strong><small>1.5 lb</small></div><span class="pick-qty">1.5 lb</span></label>
+                  <label class="pick-item"><input type="checkbox"><span>🥦</span><div><strong>Broccoli</strong><small>1 head</small></div><span class="pick-qty">1 hd</span></label>
+                  <label class="pick-item"><input type="checkbox"><span>🧅</span><div><strong>Sweet Onions</strong><small>1 lb</small></div><span class="pick-qty">1 lb</span></label>
+                  <label class="pick-item"><input type="checkbox"><span>🥒</span><div><strong>Pickling Cukes</strong><small>1 lb</small></div><span class="pick-qty">1 lb</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Fruits & Dairy</h3><span class="ph-action">4 selected</span></div>
+              <div class="panel-body">
+                <div class="pick-list">
+                  <label class="pick-item checked"><input type="checkbox" checked><span>🍎</span><div><strong>Crisp Apples</strong><small>6 ct</small></div><span class="pick-qty">6 ct</span></label>
+                  <label class="pick-item checked"><input type="checkbox" checked><span>🥚</span><div><strong>Pasture Eggs</strong><small>1 dozen</small></div><span class="pick-qty">12 ct</span></label>
+                  <label class="pick-item checked"><input type="checkbox" checked><span>🧀</span><div><strong>Farm Cheddar</strong><small>8 oz</small></div><span class="pick-qty">8 oz</span></label>
+                  <label class="pick-item checked"><input type="checkbox" checked><span>🫐</span><div><strong>Blueberries</strong><small>1 pint</small></div><span class="pick-qty">1 pt</span></label>
+                  <label class="pick-item"><input type="checkbox"><span>🍑</span><div><strong>Peaches</strong><small>4 ct</small></div><span class="pick-qty">4 ct</span></label>
+                  <label class="pick-item"><input type="checkbox"><span>🥛</span><div><strong>Fresh Milk</strong><small>1 quart</small></div><span class="pick-qty">1 qt</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-summary reveal">
+            <div class="bs-left"><span>12</span> items selected · <span>$59.00</span> this week</div>
+            <button class="btn-fill gold" onclick="window.location.href = 'dashboardError.html'">Save Box Selection</button>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 3: ORDERS ===== -->
+        <section class="module" data-module="orders">
+          <div class="module-head">
+            <h1>Order History 🧾</h1>
+            <p>All your past harvest boxes and add-on purchases.</p>
+          </div>
+          <div class="panel reveal">
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>Order #</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td><strong>#143</strong></td><td>Jul 28, 2026</td><td>12 items</td><td>$59.00</td><td><span class="badge gold">In Transit</span></td><td><span class="ph-action">Track</span></td></tr>
+                  <tr><td><strong>#142</strong></td><td>Jul 21, 2026</td><td>12 items</td><td>$59.00</td><td><span class="badge green">Delivered</span></td><td><span class="ph-action">View</span></td></tr>
+                  <tr><td><strong>#141</strong></td><td>Jul 14, 2026</td><td>14 items</td><td>$67.50</td><td><span class="badge green">Delivered</span></td><td><span class="ph-action">View</span></td></tr>
+                  <tr><td><strong>#140</strong></td><td>Jul 7, 2026</td><td>12 items</td><td>$59.00</td><td><span class="badge green">Delivered</span></td><td><span class="ph-action">View</span></td></tr>
+                  <tr><td><strong>#139</strong></td><td>Jun 30, 2026</td><td>10 items</td><td>$52.00</td><td><span class="badge green">Delivered</span></td><td><span class="ph-action">View</span></td></tr>
+                  <tr><td><strong>#138</strong></td><td>Jun 23, 2026</td><td>12 items</td><td>$59.00</td><td><span class="badge blue">Reordered</span></td><td><span class="ph-action">View</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="cards-grid cg-3" style="margin-top:1.2rem">
+            <div class="stat-card reveal"><div class="sc-top"><div class="sc-icon">🧾</div></div><div class="sc-value">26</div><div class="sc-label">Total Orders</div></div>
+            <div class="stat-card gold reveal"><div class="sc-top"><div class="sc-icon">💵</div></div><div class="sc-value">$1,534</div><div class="sc-label">Lifetime Spend</div></div>
+            <div class="stat-card blue reveal"><div class="sc-top"><div class="sc-icon">↩️</div></div><div class="sc-value">2</div><div class="sc-label">Reorders This Year</div></div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 4: DELIVERIES ===== -->
+        <section class="module" data-module="deliveries">
+          <div class="module-head">
+            <h1>Deliveries 🚚</h1>
+            <p>Track your harvest box from farm to doorstep.</p>
+          </div>
+          <div class="delivery-hero reveal">
+            <div class="dh-left">
+              <span class="badge gold">Out for Delivery</span>
+              <h2>Order #143 is on its way!</h2>
+              <p>Estimated arrival: <strong>Today, 8:00–10:00 AM</strong></p>
+              <div class="dh-meta"><span>📦 12 items</span><span>📍 123 Greenfield Rd</span><span>🚚 Driver: Marco T.</span></div>
+            </div>
+            <div class="dh-right"><div class="dh-eta"><strong>2h</strong><span>to delivery</span></div></div>
+          </div>
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Live Tracking</h3></div>
+            <div class="panel-body">
+              <div class="track-line">
+                <div class="trk-step done"><div class="trk-circle">✓</div><div><strong>Harvested</strong><small>Mon 6:00 AM</small></div></div>
+                <div class="trk-line done"></div>
+                <div class="trk-step done"><div class="trk-circle">✓</div><div><strong>Packed</strong><small>Mon 9:30 AM</small></div></div>
+                <div class="trk-line done"></div>
+                <div class="trk-step active"><div class="trk-circle">🚚</div><div><strong>In Transit</strong><small>Tue 7:00 AM</small></div></div>
+                <div class="trk-line"></div>
+                <div class="trk-step"><div class="trk-circle">📍</div><div><strong>Delivered</strong><small>Pending</small></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="panel reveal" style="margin-top:1.2rem">
+            <div class="panel-head"><h3>Upcoming Scheduled Deliveries</h3></div>
+            <div class="panel-body" style="padding:0">
+              <table class="dash-table">
+                <thead><tr><th>Order</th><th>Delivery Date</th><th>Window</th><th>Address</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>#143</td><td>Jul 31, 2026</td><td>8–10 AM</td><td>123 Greenfield Rd</td><td><span class="badge gold">Today</span></td></tr>
+                  <tr><td>#144</td><td>Aug 7, 2026</td><td>8–10 AM</td><td>123 Greenfield Rd</td><td><span class="badge gray">Scheduled</span></td></tr>
+                  <tr><td>#145</td><td>Aug 14, 2026</td><td>8–10 AM</td><td>123 Greenfield Rd</td><td><span class="badge gray">Scheduled</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 5: RECIPES ===== -->
+        <section class="module" data-module="recipes">
+          <div class="module-head">
+            <h1>Seasonal Recipes 🍳</h1>
+            <p>Cook with what's in your box this week.</p>
+          </div>
+          <div class="recipe-grid">
+            <div class="recipe-card reveal">
+              <div class="rc-img" style="background:linear-gradient(135deg,#e76f51,#f4a261)">🥗</div>
+              <div class="rc-body"><span class="badge green">Salad</span><h3>Kale & Apple Slaw</h3><p>Crisp kale, tart apples, and a honey-mustard dressing. Ready in 15 min.</p><div class="rc-meta"><span>⏱ 15 min</span><span>🥗 4 servings</span></div></div>
+            </div>
+            <div class="recipe-card reveal">
+              <div class="rc-img" style="background:linear-gradient(135deg,#40916c,#2d6a4f)">🥕</div>
+              <div class="rc-body"><span class="badge gold">Roast</span><h3>Honey Roasted Roots</h3><p>Carrots and onions glazed with raw honey from our hives. Perfect side.</p><div class="rc-meta"><span>⏱ 35 min</span><span>🥗 6 servings</span></div></div>
+            </div>
+            <div class="recipe-card reveal">
+              <div class="rc-img" style="background:linear-gradient(135deg,#48cae4,#0096c7)">🍅</div>
+              <div class="rc-body"><span class="badge blue">Soup</span><h3>Heirloom Tomato Soup</h3><p>Slow-simmered summer tomatoes with fresh basil. Comfort in a bowl.</p><div class="rc-meta"><span>⏱ 45 min</span><span>🥗 4 servings</span></div></div>
+            </div>
+            <div class="recipe-card reveal">
+              <div class="rc-img" style="background:linear-gradient(135deg,#774936,#a0683f)">🧀</div>
+              <div class="rc-body"><span class="badge amber">Bake</span><h3>Cheddar Veggie Bake</h3><p>Cheesy baked vegetables with farm cheddar. A family crowd-pleaser.</p><div class="rc-meta"><span>⏱ 50 min</span><span>🥗 8 servings</span></div></div>
+            </div>
+            <div class="recipe-card reveal">
+              <div class="rc-img" style="background:linear-gradient(135deg,#95d5b2,#40916c)">🫐</div>
+              <div class="rc-body"><span class="badge green">Dessert</span><h3>Blueberry Honey Crumble</h3><p>Fresh blueberries baked with oats and our farm honey. Summer on a plate.</p><div class="rc-meta"><span>⏱ 40 min</span><span>🥗 6 servings</span></div></div>
+            </div>
+            <div class="recipe-card reveal">
+              <div class="rc-img" style="background:linear-gradient(135deg,#f4a261,#e76f51)">🍳</div>
+              <div class="rc-body"><span class="badge gold">Breakfast</span><h3>Pasture Egg Frittata</h3><p>Fluffy eggs with kale, tomatoes, and cheddar. A farm-fresh brunch star.</p><div class="rc-meta"><span>⏱ 25 min</span><span>🥗 4 servings</span></div></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== MODULE 6: PROFILE ===== -->
+        <section class="module" data-module="profile">
+          <div class="module-head">
+            <h1>My Profile 👤</h1>
+            <p>Manage your account and delivery preferences.</p>
+          </div>
+          <div class="profile-2col">
+            <div class="profile-card reveal">
+              <div class="pc-avatar">JF</div>
+              <h2>Jane Farmer</h2><span class="badge green">Harvest Member</span>
+              <p class="pc-email">jane@email.com</p>
+              <div class="pc-stats">
+                <div><strong>26</strong><span>Orders</span></div>
+                <div><strong>1,250</strong><span>Points</span></div>
+                <div><strong>2.1yr</strong><span>Member</span></div>
+              </div>
+            </div>
+            <div class="panel reveal">
+              <div class="panel-head"><h3>Account Details</h3></div>
+              <div class="panel-body">
+                <div class="form-field"><label>Full Name</label><input type="text" value="Jane Farmer"></div>
+                <div class="form-field"><label>Email</label><input type="email" value="jane@email.com"></div>
+                <div class="form-field"><label>Phone</label><input type="tel" value="+1 555 234 5678"></div>
+                <div class="form-field"><label>Delivery Address</label><input type="text" value="123 Greenfield Road, Valley Springs, CA 95242"></div>
+                <div class="form-field"><label>Delivery Window</label>
+                  <select><option>Wednesday 8–10 AM</option><option>Wednesday 10–12 PM</option><option>Saturday 8–10 AM</option></select>
+                </div>
+                <button class="btn-fill" style="width:100%;justify-content:center" onclick="showToast('Profile updated successfully!')">Save Changes</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/member.js"></script>
+</body>
+</html>

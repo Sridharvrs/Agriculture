@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+    <img src="/images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
+</a>
+    <div class="nav-links">
+      <a href="index.html" data-nav>Home</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="services.html" data-nav>Services</a>
+      <a href="gallery.html" data-nav>Gallery</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="login.html" class="btn-login">Login</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header"><h3>Menu</h3><button class="drawer-close" aria-label="Close">✕</button></div>
+    <nav>
+      <a href="index.html" data-nav>Home</a>
+      <a href="about.html" data-nav>About</a>
+      <a href="services.html" data-nav>Services</a>
+      <a href="gallery.html" data-nav>Gallery</a>
+      <a href="contact.html" data-nav>Contact</a>
+    </nav>
+    <div class="drawer-login-wrap"><a href="login.html" class="drawer-login">Login</a></div>
+  </aside>
+
+  <!-- ===== SECTION 1: HERO (parallax strip) ===== -->
+  <section class="gal-hero">
+    <div class="gal-hero-inner">
+      <span class="eyebrow gold-eyebrow">📷 Visual Journey</span>
+      <h1>Life on the <span class="grad-amber">Farm</span></h1>
+      <p>A glimpse into the fields, faces, and harvests that make Stackly come alive.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: FILTER + MASONRY GRID ===== -->
+  <section class="section gallery-section">
+    <div class="container">
+      <div class="gal-head reveal">
+        <span class="eyebrow green-eyebrow">🖼️ Photo Collection</span>
+        <h2 class="section-title">Our Gallery</h2>
+        <p class="">Filter by category to explore different sides of the farm.</p>
+      </div>
+      <div class="gal-filters reveal">
+        <button class="gal-filter active" data-filter="all">All</button>
+        <button class="gal-filter" data-filter="fields">Fields</button>
+        <button class="gal-filter" data-filter="crops">Crops</button>
+        <button class="gal-filter" data-filter="animals">Livestock</button>
+        <button class="gal-filter" data-filter="tech">Technology</button>
+      </div>
+      <div class="masonry">
+        <div class="masonry-item reveal" data-cat="fields"><img src="images/agri2.webp" alt="Aerial striped fields"><span class="masonry-label">Aerial Fields</span></div>
+        <div class="masonry-item reveal" data-cat="crops"><img src="images/cows.webp" alt="Golden wheat field"><span class="masonry-label">Golden Wheat</span></div>
+        <div class="masonry-item reveal" data-cat="crops"><img src="/images/apple.webp" alt="Fresh vegetables"><span class="masonry-label">Fresh Veggies</span></div>
+        <div class="masonry-item reveal" data-cat="animals"><img src="/images/cow2.webp" alt="Cows grazing"><span class="masonry-label">Grazing Herd</span></div>
+        <div class="masonry-item reveal" data-cat="tech"><img src="/images/about4.webp" alt="Agricultural sprayer"><span class="masonry-label">Smart Sprayer</span></div>
+        <div class="masonry-item reveal" data-cat="fields"><img src="/images/dryfarm.webp" alt="Green and dry croplands"><span class="masonry-label">Cropland Mosaic</span></div>
+        <div class="masonry-item reveal" data-cat="crops"><img src="/images/sorting.webp" alt="Red apples"><span class="masonry-label">Orchard Apples</span></div>
+        <div class="masonry-item reveal" data-cat="tech"><img src="/images/harvest.webp" alt="Tractor plowing"><span class="masonry-label">GPS Tractor</span></div>
+        <div class="masonry-item reveal" data-cat="crops"><img src="/images/about8.webp" alt="Hydroponic greens"><span class="masonry-label">Hydroponics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: FEATURED STORY (full-width image + overlay text) ===== -->
+  <section class="featured-story">
+    <div class="fs-img" style="background-image:url('/images/about1.webp')"></div>
+    <div class="fs-overlay"></div>
+    <div class="fs-content reveal">
+      <span class="eyebrow gold-eyebrow">🌅 Featured Story</span>
+      <h2>The Harvest Morning</h2>
+      <p>Before sunrise, our farmers are already in the fields — picking vegetables at peak coolness to lock in freshness. This is the quiet, golden hour that defines every box we deliver.</p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: STATS COUNTUP ===== -->
+  <section class="section gal-stats">
+    <div class="container">
+      <div class="gal-stats-head reveal">
+        <span class="eyebrow green-eyebrow">📊 By the Numbers</span>
+        <h2 class="section-title">Our Farm in Figures</h2>
+      </div>
+      <div class="gal-stats-grid">
+        <div class="gs-card reveal"><strong data-count="1200">0</strong><span>Acres Cultivated</span><div class="gs-bar" style="--w:90%"></div></div>
+        <div class="gs-card reveal"><strong data-count="340">0</strong><span>Partner Farms</span><div class="gs-bar" style="--w:65%"></div></div>
+        <div class="gs-card reveal"><strong data-count="40">0</strong><span>Crop Varieties</span><div class="gs-bar" style="--w:50%"></div></div>
+        <div class="gs-card reveal"><strong data-count="50000">0</strong><span>Families Served</span><div class="gs-bar" style="--w:100%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: VIDEO TEASER ===== -->
+  <section class="section video-section">
+    <div class="container video-box reveal">
+      <div class="video-poster" style="background-image:url('/images/vid-img.webp')">
+        <button class="play-btn" id="playBtn" aria-label="Play">▶</button>
+      </div>
+      <div class="video-text">
+        <span class="eyebrow gold-eyebrow">🎬 Watch</span>
+        <h2>A Day at Stackly</h2>
+        <p>Take a 3-minute visual tour through our fields, greenhouses, and harvest — see where your food is born.</p>
+        <div class="video-meta"><span>⏱ 3 min</span><span>📺 4K</span><span>🌱 Behind the scenes</span></div>
+      </div>
+    </div>
+  </section>
+
+<!-- =========================
+     BEHIND THE HARVEST
+========================= -->
+
+<section class="section harvest-process">
+
+    <div class="container">
+
+        <div class="harvest-head reveal">
+
+            <span class="eyebrow green-eyebrow">
+                🌾 Behind the Harvest
+            </span>
+
+            <h2 class="section-title">
+                From Farm to Your Table
+            </h2>
+
+            <p class="">
+                Every product follows a carefully managed journey to ensure
+                freshness, quality, and sustainability.
+            </p>
+
+        </div>
+
+        <div class="harvest-grid">
+
+            <!-- Card -->
+
+            <div class="harvest-card reveal">
+
+                <div class="harvest-img">
+
+                    <img src="/images/harvest2.webp"
+                        alt="Harvest">
+
+                </div>
+
+                <div class="harvest-icon">🌱</div>
+
+                <h3>Harvest</h3>
+
+                <p>
+                    Fresh crops are harvested at peak maturity to preserve
+                    nutrition and natural flavor.
+                </p>
+
+            </div>
+
+            <div class="harvest-arrow">➜</div>
+
+            <!-- Card -->
+
+            <div class="harvest-card reveal">
+
+                <div class="harvest-img">
+
+                    <img src="/images/sorting.webp"
+                        alt="Sorting">
+
+                </div>
+
+                <div class="harvest-icon">🥬</div>
+
+                <h3>Sorting</h3>
+
+                <p>
+                    Every batch is carefully inspected and graded before
+                    moving to the next stage.
+                </p>
+
+            </div>
+
+            <div class="harvest-arrow">➜</div>
+
+            <!-- Card -->
+
+            <div class="harvest-card reveal">
+
+                <div class="harvest-img">
+
+                    <img src="/images/packing.webp"
+                        alt="Packing">
+
+                </div>
+
+                <div class="harvest-icon">📦</div>
+
+                <h3>Packing</h3>
+
+                <p>
+                    Eco-friendly packaging keeps produce fresh while reducing
+                    environmental impact.
+                </p>
+
+            </div>
+
+            <div class="harvest-arrow">➜</div>
+
+            <!-- Card -->
+
+            <div class="harvest-card reveal">
+
+                <div class="harvest-img">
+
+                    <img src="/images/export.webp"
+                        alt="Delivery">
+
+                </div>
+
+                <div class="harvest-icon">🚛</div>
+
+                <h3>Delivery</h3>
+
+                <p>
+                    Delivered quickly through our cold-chain logistics to
+                    maintain maximum freshness.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================
+      SEASONAL GALLERY
+==========================-->
+
+<section class="section seasonal-gallery">
+
+    <div class="container">
+
+        <div class="season-head reveal">
+
+            <span class="eyebrow green-eyebrow">
+                🍃 Seasonal Collection
+            </span>
+
+            <h2 class="section-title">
+                Every Season Tells a Story
+            </h2>
+
+            <p class="">
+                Discover how our fields transform throughout the year, bringing
+                fresh colors, crops, and experiences in every season.
+            </p>
+
+        </div>
+
+        <div class="season-grid">
+
+            <div class="season-card reveal">
+
+                <img src="/images/farmer.webp" alt="Spring">
+
+                <div class="season-content">
+
+                    <span class="season-badge">🌸 Spring</span>
+
+                    <h3>Fresh Beginnings</h3>
+
+                    <ul>
+                        <li>✓ Seed Sowing</li>
+                        <li>✓ Blooming Fields</li>
+                        <li>✓ Fresh Greens</li>
+                    </ul>
+
+                    <a href="#">Explore →</a>
+
+                </div>
+
+            </div>
+
+            <div class="season-card reveal">
+
+                <img src="/images/farm.webp" alt="Summer">
+
+                <div class="season-content">
+
+                    <span class="season-badge">☀ Summer</span>
+
+                    <h3>Peak Growth</h3>
+
+                    <ul>
+                        <li>✓ Smart Irrigation</li>
+                        <li>✓ Fruit Harvest</li>
+                        <li>✓ Green Fields</li>
+                    </ul>
+
+                    <a href="#">Explore →</a>
+
+                </div>
+
+            </div>
+
+            <div class="season-card reveal">
+
+                <img src="/images/vegs.webp" alt="Autumn">
+
+                <div class="season-content">
+
+                    <span class="season-badge">🌾 Autumn</span>
+
+                    <h3>Golden Harvest</h3>
+
+                    <ul>
+                        <li>✓ Wheat Harvest</li>
+                        <li>✓ Storage</li>
+                        <li>✓ Market Supply</li>
+                    </ul>
+
+                    <a href="#">Explore →</a>
+
+                </div>
+
+            </div>
+
+            <div class="season-card reveal">
+
+                <img src="/images/vid-img.webp" alt="Winter">
+
+                <div class="season-content">
+
+                    <span class="season-badge">❄ Winter</span>
+
+                    <h3>Preparation</h3>
+
+                    <ul>
+                        <li>✓ Soil Care</li>
+                        <li>✓ Greenhouse Work</li>
+                        <li>✓ Crop Planning</li>
+                    </ul>
+
+                    <a href="#">Explore →</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================
+      FARM TIMELINE
+==========================-->
+
+<section class="section farm-timeline">
+
+    <div class="container">
+
+        <div class="timeline-head reveal">
+
+            <span class="eyebrow green-eyebrow">
+                📅 Seasonal Journey
+            </span>
+
+            <h2 class="section-title">
+                Farm Timeline
+            </h2>
+
+            <p class="">
+                Follow the complete seasonal cycle from planting to delivery.
+            </p>
+
+        </div>
+
+        <div class="timeline-wrapper">
+
+            <div class="timeline-line"></div>
+
+            <div class="timeline-card reveal">
+
+                <div class="timeline-dot">🌱</div>
+
+                <img src="/images/about8.webp">
+
+                <h3>Planting</h3>
+
+                <span>January</span>
+
+                <p>Healthy seeds are planted in nutrient-rich soil.</p>
+
+            </div>
+
+            <div class="timeline-card reveal">
+
+                <div class="timeline-dot">🌿</div>
+
+                <img src="/images/farmer.webp">
+
+                <h3>Growing</h3>
+
+                <span>March</span>
+
+                <p>Smart irrigation and natural nutrition support growth.</p>
+
+            </div>
+
+            <div class="timeline-card reveal">
+
+                <div class="timeline-dot">🌾</div>
+
+                <img src="/images/vegetables.webp">
+
+                <h3>Harvest</h3>
+
+                <span>July</span>
+
+                <p>Fresh produce is harvested at the perfect maturity.</p>
+
+            </div>
+
+            <div class="timeline-card reveal">
+
+                <div class="timeline-dot">📦</div>
+
+                <img src="/images/packing.webp">
+
+                <h3>Distribution</h3>
+
+                <span>August</span>
+
+                <p>Products are packed and delivered while still fresh.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=================================
+        360° VIRTUAL FARM TOUR
+==================================-->
+
+<section class="section virtual-tour">
+
+    <div class="container">
+
+        <div class="tour-head reveal">
+
+            <span class="eyebrow green-eyebrow">
+                🌍 360° Experience
+            </span>
+
+            <h2 class="section-title">
+                Explore Our Farm Virtually
+            </h2>
+
+            <p class="section-sub">
+                Walk through lush fields, modern greenhouses, irrigation systems,
+                and harvest areas with our immersive virtual farm experience.
+            </p>
+
+        </div>
+
+        <div class="tour-wrapper reveal">
+
+            <div class="tour-image">
+
+                <img src="/images/farmer.webp"
+                    alt="Virtual Farm Tour">
+
+                <div class="tour-badge">
+                    🌍 360° View
+                </div>
+
+                <button class="tour-play">
+                    ▶ Start Virtual Tour
+                </button>
+
+            </div>
+
+            <div class="tour-features">
+
+                <div class="tour-feature">
+                    <div class="tour-icon">🚜</div>
+                    <div>
+                        <h4>Farm Machinery</h4>
+                        <p>Modern tractors & smart equipment.</p>
+                    </div>
+                </div>
+
+                <div class="tour-feature">
+                    <div class="tour-icon">🌱</div>
+                    <div>
+                        <h4>Organic Fields</h4>
+                        <p>Walk through healthy crop plantations.</p>
+                    </div>
+                </div>
+
+                <div class="tour-feature">
+                    <div class="tour-icon">💧</div>
+                    <div>
+                        <h4>Smart Irrigation</h4>
+                        <p>Explore automated watering systems.</p>
+                    </div>
+                </div>
+
+                <div class="tour-feature">
+                    <div class="tour-icon">🏡</div>
+                    <div>
+                        <h4>Greenhouses</h4>
+                        <p>Visit climate-controlled farming zones.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=================================
+      FARMER PORTRAIT COLLECTION
+==================================-->
+
+<section class="section farmer-collection">
+
+    <div class="container">
+
+        <div class="farmer-head reveal">
+
+            <span class="eyebrow green-eyebrow">
+                👨‍🌾 Meet Our Experts
+            </span>
+
+            <h2 class="section-title">
+                Farmer Portrait Collection
+            </h2>
+
+            <p class="section-sub">
+                Meet the passionate farmers whose dedication and experience
+                bring fresh, healthy produce from our fields to your table.
+            </p>
+
+        </div>
+
+        <div class="farmer-grid">
+
+            <!-- Card 1 -->
+
+            <div class="farmer-card reveal">
+
+                <div class="farmer-image">
+
+                    <img src="/images/farmer1.webp" alt="Farmer">
+
+                </div>
+
+                <div class="farmer-content">
+
+                    <span class="role">🌱 Organic Farming</span>
+
+                    <h3>Ramesh Kumar</h3>
+
+                    <p>
+                        18 years of experience growing pesticide-free vegetables.
+                    </p>
+
+                    <div class="farmer-meta">
+
+                        <span>⭐ 4.9</span>
+
+                        <span>18 Years</span>
+
+                    </div>
+
+                    <a href="#">View Profile →</a>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="farmer-card reveal">
+
+                <div class="farmer-image">
+
+                    <img src="/images/farmer2.webp" alt="Farmer">
+
+                </div>
+
+                <div class="farmer-content">
+
+                    <span class="role">🍎 Fruit Specialist</span>
+
+                    <h3>Anitha Devi</h3>
+
+                    <p>
+                        Passionate about producing premium seasonal fruits.
+                    </p>
+
+                    <div class="farmer-meta">
+
+                        <span>⭐ 5.0</span>
+
+                        <span>15 Years</span>
+
+                    </div>
+
+                    <a href="#">View Profile →</a>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="farmer-card reveal">
+
+                <div class="farmer-image">
+
+                    <img src="/images/farmer3.webp" alt="Farmer">
+
+                </div>
+
+                <div class="farmer-content">
+
+                    <span class="role">🌾 Rice Expert</span>
+
+                    <h3>Suresh Patel</h3>
+
+                    <p>
+                        Specializes in sustainable rice cultivation methods.
+                    </p>
+
+                    <div class="farmer-meta">
+
+                        <span>⭐ 4.8</span>
+
+                        <span>20 Years</span>
+
+                    </div>
+
+                    <a href="#">View Profile →</a>
+
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="farmer-card reveal">
+
+                <div class="farmer-image">
+
+                    <img src="/images/farmer4.webp" alt="Farmer">
+
+                </div>
+
+                <div class="farmer-content">
+
+                    <span class="role">🥬 Greenhouse Expert</span>
+
+                    <h3>Meena Joseph</h3>
+
+                    <p>
+                        Expert in greenhouse cultivation and smart farming.
+                    </p>
+
+                    <div class="farmer-meta">
+
+                        <span>⭐ 5.0</span>
+
+                        <span>12 Years</span>
+
+                    </div>
+
+                    <a href="#">View Profile →</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- ===== SECTION 6: INSTAGRAM STRIP ===== -->
+  <section class="section insta-section">
+    <div class="container">
+      <div class="insta-head reveal">
+        <span class="eyebrow green-eyebrow">📱 Follow Along</span>
+        <h2 class="section-title">Daily Farm Moments</h2>
+        <p class="">Catch our latest harvests and behind-the-scenes on social media.</p>
+      </div>
+      <div class="insta-strip">
+        <a href="#" class="insta-tile reveal" style="background-image:url('/images/farm.webp')"><span>🌾</span></a>
+        <a href="#" class="insta-tile reveal" style="background-image:url('/images/apple.webp')"><span>🍎</span></a>
+        <a href="#" class="insta-tile reveal" style="background-image:url('/images/tractor.webp')"><span>🚜</span></a>
+        <a href="#" class="insta-tile reveal" style="background-image:url('/images/cow2.webp')"><span>🐄</span></a>
+        <a href="#" class="insta-tile reveal" style="background-image:url('/images/vegs.webp')"><span>🥕</span></a>
+        <a href="#" class="insta-tile reveal" style="background-image:url('/images/harvest2.webp')"><span>🌱</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <button class="lb-prev" aria-label="Previous">‹</button>
+    <img src="" alt="Enlarged photo" id="lbImg">
+    <button class="lb-next" aria-label="Next">›</button>
+  </div>
+
+  <footer class="footer" data-footer></footer>
+  <script src="js/common.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

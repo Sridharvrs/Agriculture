@@ -1,0 +1,283 @@
+/* ============================================================
+   AgroHarvest — Login Page (unique full-screen split design)
+   ============================================================ */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== CLOSE BUTTON ===== */
+.login-close {
+  position: fixed;
+  top: 1.5rem; left: 1.5rem;
+  z-index: 100;
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+  transition: all var(--transition);
+}
+.login-close:hover {
+  background: var(--sun-amber);
+  transform: rotate(90deg) scale(1.1);
+  border-color: var(--sun-amber);
+}
+
+/* ===== SECTION 1: LEFT VISUAL ===== */
+.login-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--green-deep), var(--green-forest));
+}
+
+.ll-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(135deg, rgba(27,67,50,0.75), rgba(45,106,79,0.6)),
+    url('https://images.pexels.com/photos/16560054/pexels-photo-16560054.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') center/cover;
+}
+
+.ll-content { position: relative; z-index: 1; color: #fff; max-width: 440px; }
+
+.ll-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.ll-brand .leaf-icon {
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--sun-gold), var(--sun-amber));
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+.ll-content h1 {
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.grad-amber { background: linear-gradient(135deg, var(--sun-gold), #ffd166); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.ll-content p { opacity: 0.9; margin-bottom: 2rem; font-size: 1.05rem; }
+
+.ll-perks { display: grid; gap: 0.9rem; }
+.ll-perks li { display: flex; align-items: center; gap: 0.7rem; }
+.ll-perks span {
+  width: 26px; height: 26px;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  font-weight: 700;
+  color: var(--sun-gold);
+}
+
+/* ===== RIGHT FORM AREA ===== */
+.login-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem clamp(1.5rem, 4vw, 3.5rem);
+  background: var(--cream);
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.gold-eyebrow { background: #fff3d6; color: #b5651d; }
+
+/* ===== SECTION 2: ROLE SELECTOR ===== */
+.role-section { margin-bottom: 2rem; }
+.role-hint { opacity: 0.65; font-size: 0.9rem; margin: 0.4rem 0 1rem; }
+
+.role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.1rem 0.6rem;
+  background: #fff;
+  border: 2px solid #e0e8e0;
+  border-radius: 14px;
+  transition: all var(--transition);
+}
+.role-card:hover { border-color: var(--green-leaf); transform: translateY(-3px); }
+.role-card.active {
+  border-color: var(--sun-gold);
+  background: linear-gradient(135deg, #fff8e7, #fff);
+  box-shadow: 0 6px 18px rgba(244,162,97,0.25);
+}
+
+.role-icon { font-size: 1.8rem; margin-bottom: 0.4rem; }
+.role-card strong { font-family: var(--font-head); font-size: 0.95rem; }
+.role-card span { font-size: 0.74rem; opacity: 0.6; }
+
+/* ===== SECTION 3: LOGIN FORM ===== */
+.login-form-section { margin-bottom: 1.5rem; }
+.login-form-section h2 {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+#roleLabel { color: var(--sun-amber); font-size: 1.1rem; }
+
+.field { display: flex; flex-direction: column; margin-bottom: 1rem; }
+.field label { font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; color: var(--green-deep); }
+.field input {
+  padding: 0.85rem 1rem;
+  border: 2px solid #e0e8e0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+}
+.field input:focus { outline: none; border-color: var(--green-leaf); box-shadow: 0 0 0 4px rgba(64,145,108,0.12); }
+
+.pass-wrap { position: relative; }
+.pass-wrap input { width: 100%; padding-right: 3rem; }
+.pass-toggle {
+  position: absolute;
+  right: 0.8rem; top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  opacity: 0.6;
+  transition: opacity var(--transition);
+}
+.pass-toggle:hover { opacity: 1; }
+
+.pass-toggle{
+    color:#666;
+    font-size:18px;
+    transition:.3s;
+}
+
+.pass-toggle:hover{
+    color:var(--green-forest);
+}
+
+.pass-toggle i{
+    pointer-events:none;
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+}
+.remember { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; opacity: 0.8; }
+.remember input { accent-color: var(--green-leaf); }
+.forgot { color: var(--sun-amber); font-weight: 600; }
+.forgot:hover { text-decoration: underline; }
+
+.btn-signin {
+  width: 100%;
+  padding: 0.95rem;
+  background: linear-gradient(135deg, var(--green-forest), var(--green-leaf));
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(45,106,79,0.35);
+  transition: all var(--transition);
+}
+.btn-signin:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(45,106,79,0.5); }
+
+.login-error, .login-success {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.login-error { background: #ffe8e0; color: #c0392b; }
+.login-error.show { display: block; animation: shake 0.4s; }
+.login-success { background: var(--green-mint); color: var(--green-deep); }
+.login-success.show { display: block; }
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+/* ===== SECTION 4: DIVIDER ===== */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  color: #999;
+  font-size: 0.85rem;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e0e8e0;
+}
+
+/* ===== SECTION 5: SOCIAL ===== */
+.social-section { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 1.5rem; }
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.8rem;
+  background: #fff;
+  border: 2px solid #e0e8e0;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition);
+}
+.social-btn:hover { border-color: var(--green-leaf); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.social-btn span {
+  width: 22px; height: 22px;
+  display: grid; place-items: center;
+  font-weight: 700;
+  font-family: var(--font-head);
+}
+.social-btn:nth-child(1) span { color: #ea4335; }
+.social-btn:nth-child(2) span::before { content: ''; display: block; width: 14px; height: 14px; background: #000; border-radius: 50%; }
+.social-btn:nth-child(3) span { color: #1877f2; }
+
+/* ===== SECTION 6: SIGNUP ===== */
+.signup-section { text-align: center; }
+.signup-section p { font-size: 0.92rem; opacity: 0.8; margin-bottom: 0.5rem; }
+.signup-link { color: var(--sun-amber); font-weight: 700; }
+.signup-link:hover { text-decoration: underline; }
+.back-home a { color: var(--green-forest); font-weight: 600; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  body { grid-template-columns: 1fr; overflow: auto; }
+  .login-left { display: none; }
+  .login-right { max-height: none; padding: 5rem 1.5rem 2rem; }
+  .login-close { color: var(--green-deep); background: rgba(255,255,255,0.9); border-color: #e0e8e0; }
+}
+@media (max-width: 480px) {
+  .role-grid { grid-template-columns: 1fr; }
+  .social-section { grid-template-columns: 1fr; }
+}
