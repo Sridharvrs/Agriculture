@@ -420,3 +420,103 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         width:130px;
     }
 }
+
+/*==================================
+    FOOTER NEWSLETTER
+==================================*/
+
+.footer-newsletter{
+
+    margin-top:20px;
+
+}
+
+.footer-newsletter h4{
+
+    color:#fff;
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+    font-family:var(--font-head);
+
+}
+
+.footer-newsletter p{
+
+    color:rgba(255,255,255,.75);
+
+    font-size:14px;
+
+    margin-bottom:16px;
+
+    line-height:1.6;
+
+}
+
+.footer-news-form{
+
+    display:flex;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.footer-news-form input{
+
+    flex:1;
+
+    padding:14px 18px;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:14px;
+
+}
+
+.footer-news-form input::placeholder{
+
+    color:rgba(255,255,255,.55);
+
+}
+
+.footer-news-form button{
+
+    padding:0 22px;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        135deg,
+        var(--sun-gold),
+        var(--sun-amber)
+    );
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.footer-news-form button:hover{
+
+    filter:brightness(1.08);
+
+}

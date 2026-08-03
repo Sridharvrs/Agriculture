@@ -74,7 +74,7 @@ function injectFooter() {
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-brand">
-    <img src="images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
+    <img src="/images/logoimg.webp" alt="Stackly Logo" class="nav-logo">
 </a>
           <p>Cultivating tomorrow with sustainable, tech-driven agriculture. From soil to harvest, we grow goodness.</p>
           <div class="footer-social">
@@ -108,7 +108,19 @@ function injectFooter() {
           <a href="contact.html">123 Greenfield Road</a>
           <a href="contact.html">info@Stackly.com</a>
           <a href="contact.html">+91 9865452312</a>
-          <a href="login.html" style="color:var(--sun-gold);font-weight:600">Member Login →</a>
+          <form class="footer-news-form">
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
         </div>
       </div>
       <div class="footer-bottom">
