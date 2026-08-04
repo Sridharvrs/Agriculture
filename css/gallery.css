@@ -1420,3 +1420,7 @@
     padding:40px;
     border-radius:24px;
 }
+
+.video-poster{
+    background-image: url("../images/vid-img.webp");
+}
