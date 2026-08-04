@@ -1422,5 +1422,7 @@
 }
 
 .video-poster{
-    background-image: url("../images/vid-img.webp");
+    background:
+    linear-gradient(135deg, rgba(27,67,50,0.55), rgba(45,106,79,0.35)),
+    url('../images/vid-img.webp') center/cover;
 }
